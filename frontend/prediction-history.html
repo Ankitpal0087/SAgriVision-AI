@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7faf7" />
+    <title>Prediction History | SAgriVision AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./prediction-history.css" />
+    <script>
+      if (!sessionStorage.getItem('sagrivision-auth-token')) window.location.replace('./login.html');
+    </script>
+  </head>
+  <body class="history-page">
+    <main class="history-shell">
+      <header class="history-header">
+        <a class="history-brand" href="./dashboard.html" aria-label="SAgriVision AI Dashboard"><span class="history-brand-mark" aria-hidden="true">✦</span><span>SAgriVision <small>AI</small></span></a>
+        <div class="history-header-actions"><span class="history-user" id="history-user"></span><button class="history-back-button" id="history-back" type="button">← Back to Dashboard</button></div>
+      </header>
+      <section class="history-content">
+        <div class="history-intro"><div><p class="history-eyebrow">YOUR RECORDS</p><h1>Prediction History</h1><p>Review your activity by intelligent tool.</p></div></div>
+        <div class="history-tabs" role="tablist" aria-label="History modules"><button class="history-tab is-active" type="button" role="tab" aria-selected="true" data-module="all">All</button><button class="history-tab" type="button" role="tab" aria-selected="false" data-module="seed">Seed Detection</button><button class="history-tab" type="button" role="tab" aria-selected="false" data-module="crop">Crop Recommendation</button><button class="history-tab" type="button" role="tab" aria-selected="false" data-module="disease">Disease Detection</button><button class="history-tab" type="button" role="tab" aria-selected="false" data-module="cropgpt">CropGPT / Chatbot</button></div>
+        <section class="history-card" aria-live="polite"><div class="history-card-heading"><div><p class="history-eyebrow">PERSONAL ACTIVITY</p><h2 id="history-section-title">All activity</h2></div><span class="history-count" id="history-count"></span></div><div class="history-list" id="history-list"><p class="history-empty">Loading your history...</p></div></section>
+      </section>
+    </main>
+    <script src="./prediction-history.js"></script>
+  </body>
+</html>

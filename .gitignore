@@ -1,0 +1,69 @@
+
+
+# Node.js dependencies
+node_modules/
+**/node_modules/
+bower_components/
+
+# Python environments
+.venv/
+venv/
+env/
+backend.venv/
+backend/crop.venv/
+**/.venv/
+**/venv/
+**/env/
+*.venv/
+
+# Python caches
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+
+# Logs and temporary files
+*.log
+logs/
+log/
+.cache/
+**/.cache/
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+
+# Build and test output
+dist/
+**/dist/
+build/
+**/build/
+coverage/
+.nyc_output/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local machine configuration
+*.local
+*.local.*
+
+# Local backups
+*.local-backup
+

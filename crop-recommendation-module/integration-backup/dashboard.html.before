@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f8f5" />
+    <title>Dashboard | SAgriVision AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./dashboard.css" />
+    <script>
+      if (!sessionStorage.getItem('sagrivision-auth-token')) window.location.replace('./login.html');
+    </script>
+  </head>
+  <body class="dashboard-page">
+    <div class="dashboard-shell">
+      <aside class="dashboard-sidebar" data-i18n-aria="dashboardNavigationAria" aria-label="Dashboard navigation">
+        <a class="dashboard-brand" href="./dashboard.html" aria-label="SAgriVision AI Dashboard">
+          <span class="dashboard-brand-mark" aria-hidden="true">✦</span>
+          <span>SAgriVision <small>AI</small></span>
+        </a>
+        <nav class="dashboard-nav">
+          <a class="dashboard-nav-link is-active" href="./dashboard.html"><span>⌂</span><span data-i18n="dashboardNav">Dashboard</span></a>
+          <a class="dashboard-nav-link" href="./supported-seeds.html"><span>◈</span><span data-i18n="dashboardSeedIdentification">Seed Identification</span></a>
+          <span class="dashboard-nav-link"><span>⌁</span><span>Crop Recommendation</span></span>
+          <a class="dashboard-nav-link" href="#disease-detection"><span>✣</span><span data-i18n="dashboardDiseaseDetection">Disease Detection</span></a>
+          <a class="dashboard-nav-link" href="#cropgpt"><span>✦</span><span data-i18n="dashboardCropGPT">CropGPT</span></a>
+          <a class="dashboard-nav-link" href="./prediction-history.html"><span>▤</span><span data-i18n="dashboardPredictionHistory">Prediction History</span></a>
+          <a class="dashboard-nav-link" href="#reports"><span>▥</span><span data-i18n="dashboardReports">Reports</span></a>
+          <a class="dashboard-nav-link" href="#feedback"><span>♡</span><span data-i18n="dashboardFeedback">Feedback</span></a>
+          <a class="dashboard-nav-link" href="#profile"><span>◎</span><span data-i18n="dashboardProfile">Profile</span></a>
+        </nav>
+        <button class="dashboard-logout" id="logout-button" type="button"><span>↪</span><span data-i18n="dashboardLogout">Logout</span></button>
+      </aside>
+
+      <main class="dashboard-main">
+        <header class="dashboard-topbar">
+          <div class="dashboard-topbar-actions">
+            <div class="dashboard-language" data-i18n-aria="dashboardLanguageAria" aria-label="Language"><button type="button" data-language="en" data-i18n="dashboardEnglish">English</button><span>/</span><button type="button" data-language="hi" data-i18n="dashboardHindi">हिंदी</button></div>
+            <div class="dashboard-user-chip"><span class="dashboard-avatar" id="user-initials">U</span><span><strong id="topbar-user-name">User</strong><small id="topbar-user-email"></small></span><span class="dashboard-chevron">⌄</span></div>
+          </div>
+        </header>
+
+        <div class="dashboard-content">
+          <section class="dashboard-welcome">
+            <div><p class="dashboard-eyebrow" data-i18n="dashboardGreetingEyebrow">YOUR FARMING COMPANION</p><h1><span data-i18n="dashboardGreeting">Good morning,</span> <span id="greeting-name">Farmer</span> <span aria-hidden="true">✦</span></h1><p data-i18n="dashboardWelcomeText">Here’s what’s happening with your farm today.</p></div>
+          </section>
+
+          <section class="dashboard-stat-grid" data-i18n-aria="dashboardSummaryAria" aria-label="Summary">
+            <article class="dashboard-stat-card"><span class="dashboard-stat-icon is-green">◈</span><div><p data-i18n="dashboardTotalPredictions">Total Predictions</p><strong id="total-predictions">0</strong><small data-i18n="dashboardAcrossTools">Across all tools</small></div><span class="dashboard-stat-trend">↗</span></article>
+            <article class="dashboard-stat-card"><span class="dashboard-stat-icon is-blue">✣</span><div><p data-i18n="dashboardSeedAnalyses">Seed Analyses</p><strong id="analysis-count">0</strong><small data-i18n="dashboardInsights">Insights generated</small></div><span class="dashboard-stat-trend">↗</span></article>
+            <article class="dashboard-stat-card"><span class="dashboard-stat-icon is-purple">◷</span><div><p data-i18n="dashboardRecentActivity">Recent Activity</p><strong id="activity-count">0</strong><small data-i18n="dashboardLatestRecords">Latest records</small></div><span class="dashboard-stat-trend">↗</span></article>
+          </section>
+
+          <section class="dashboard-lower-grid">
+            <div class="dashboard-section"><div class="dashboard-section-heading"><div><p class="dashboard-eyebrow" data-i18n="dashboardExplore">EXPLORE</p><h2 data-i18n="dashboardIntelligentTools">Intelligent Tools</h2></div><span class="dashboard-muted-label" data-i18n="dashboardBuiltForField">Built for your field</span></div><div class="dashboard-tools-grid"><button class="dashboard-tool-card" type="button" data-action="seed"><span class="dashboard-tool-icon is-green">◈</span><strong data-i18n="dashboardSeedIdentification">Seed Identification</strong><small data-i18n="dashboardKnowWhatYouPlant">Know what you plant</small></button><button class="dashboard-tool-card is-disabled" type="button" disabled><span class="dashboard-tool-icon is-red">✣</span><strong data-i18n="dashboardDiseaseDetection">Disease Detection</strong><small data-i18n="dashboardComingSoon">Coming soon</small></button><button class="dashboard-tool-card is-disabled" type="button" disabled><span class="dashboard-tool-icon is-purple">✦</span><strong data-i18n="dashboardCropGPT">CropGPT</strong><small data-i18n="dashboardComingSoon">Coming soon</small></button></div></div>
+            <div class="dashboard-section dashboard-activity-section" id="prediction-history"><div class="dashboard-section-heading"><div><p class="dashboard-eyebrow" data-i18n="dashboardYourRecords">YOUR RECORDS</p><h2 data-i18n="dashboardRecentActivity">Recent Activity</h2></div><button class="dashboard-text-button" type="button" data-action="history" data-i18n="dashboardViewAll">View all →</button></div><div class="dashboard-activity-list" id="activity-list"><p class="dashboard-empty-state" data-i18n="dashboardLoadingActivity">Loading your activity...</p></div></div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <script src="./i18n.js"></script><script src="./dashboard.js"></script>
+  </body>
+</html>

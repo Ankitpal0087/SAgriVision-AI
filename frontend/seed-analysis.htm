@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d6b4f" />
+    <title>Seed Identification | SAgriVision AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="recommendation-page seed-page">
+    <header class="site-header">
+      <a class="brand-lockup brand-link" href="./index.html" aria-label="SAgriVision AI home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 38V16" /><path d="M24 27c-6.2 0-11.2-4.9-11.2-11.1C19 15.1 24 20 24 27Z" /><path d="M24 23c6.2 0 11.2-4.9 11.2-11.1C29 11.9 24 16.8 24 23Z" /><path d="M18.5 38h11" /></svg></span><span class="brand-name">SAgri<span>Vision AI</span></span></a>
+      <div class="language-switcher" aria-label="Language selection"><button type="button" data-language="en">English</button><span>/</span><button type="button" data-language="hi">हिंदी</button></div>
+    </header>
+
+    <main class="recommendation-shell">
+      <section class="recommendation-intro">
+        <div class="seed-hero-copy">
+          <span class="form-kicker" data-i18n="seedEyebrow"></span>
+          <h1 data-i18n="seedTitle"></h1>
+          <p data-i18n="seedSubtitle"></p>
+          <div class="seed-hero-signals" aria-hidden="true"><span>Seed Identification</span><span>Identify</span><i></i><span>Understand</span><i></i><span>Grow</span></div>
+        </div>
+        <div class="seed-hero-media" id="seed-hero-media" hidden aria-label="Detected crop visual">
+          <div class="seed-hero-badge"><span class="seed-hero-dot" aria-hidden="true"></span><span id="seed-hero-badge-text">Seed Identification</span></div>
+          <div class="seed-hero-image-main"><img id="seed-hero-main" alt="Detected crop photograph" width="640" height="360" /></div>
+          <div class="seed-hero-image-support"><img id="seed-hero-support" alt="Detected crop photograph" width="300" height="220" /></div>
+          <div class="seed-hero-caption"><strong id="seed-hero-title">Seed Identification</strong><span id="seed-hero-status">Identify • Understand • Grow</span></div>
+          <div class="seed-hero-controls" id="seed-hero-controls" aria-label="Farming visual controls">
+            <button type="button" data-hero-previous aria-label="Previous farming visual">‹</button>
+            <div class="seed-hero-dots" id="seed-hero-dots" role="tablist" aria-label="Farming visuals"></div>
+            <button type="button" data-hero-next aria-label="Next farming visual">›</button>
+          </div>
+        </div>
+      </section>
+      <div class="seed-grid">
+        <section class="recommendation-card upload-card">
+          <div class="section-heading"><span class="step-number">01</span><div><h2 data-i18n="uploadTitle"></h2><p data-i18n="uploadSubtitle"></p></div></div>
+          <div class="upload-zone" id="upload-zone">
+            <div class="empty-upload" id="empty-upload"><div class="upload-icon" aria-hidden="true">↑</div><strong data-i18n="uploadTitle"></strong><span data-i18n="supportedImage"></span><div class="upload-actions"><label class="secondary-button" for="gallery-input"><span aria-hidden="true">▣</span><span data-i18n="chooseGallery"></span></label><label class="secondary-button camera-button" for="camera-input"><span aria-hidden="true">◉</span><span data-i18n="captureCamera"></span></label></div></div>
+            <div class="preview-upload" id="preview-upload" hidden><img id="seed-preview" alt="Seed preview" /><div class="preview-info"><strong id="file-name"></strong><span id="file-size"></span><div class="preview-actions"><label class="text-button" for="gallery-input" data-i18n="changeImage"></label><button class="text-button danger-text" id="remove-image" type="button" data-i18n="removeImage"></button></div></div></div>
+          </div>
+          <input class="visually-hidden" id="gallery-input" type="file" accept="image/jpeg,image/png,image/webp" />
+          <input class="visually-hidden" id="camera-input" type="file" accept="image/*" capture="environment" />
+          <span class="error-message form-error" id="image-error" role="alert"></span>
+          <button class="submit-button recommendation-submit" id="analyze-button" type="button"><span data-i18n="analyzeSeed"></span><span aria-hidden="true">→</span></button>
+        </section>
+
+        <section class="recommendation-card analysis-card" aria-live="polite">
+          <div class="analysis-empty" id="analysis-empty"><div class="result-illustration" aria-hidden="true">✦</div><h2 data-i18n="analysisResult"></h2><p data-i18n="seedSubtitle"></p></div>
+          <div class="analysis-progress" id="analysis-progress" hidden><div class="analysis-loader" aria-hidden="true"><span></span><span></span><span></span></div><span class="analysis-progress-label" data-i18n="analyzingSeed">Analyzing seed</span><p>Identifying seed type…</p><div class="analysis-loading-track" aria-hidden="true"><span></span></div></div>
+          <div class="analysis-result" id="analysis-result" hidden><span class="result-label" data-i18n="analysisComplete"></span><div class="seed-result-grid"><div><span class="result-metric-label" data-i18n="seedType"></span><strong id="predicted-seed"></strong></div><div><span class="result-metric-label" data-i18n="confidence"></span><strong id="seed-confidence"></strong></div></div><section class="seed-info-panel" id="seed-info-panel" hidden aria-labelledby="seed-info-name"><div class="seed-info-heading"><span class="seed-info-kicker" data-seed-info-label="about"></span><strong id="seed-info-name"></strong></div><p id="seed-info-description"></p><dl class="seed-properties"><div><dt data-seed-info-label="category"></dt><dd id="seed-info-category"></dd></div><div><dt data-seed-info-label="uses"></dt><dd id="seed-info-uses"></dd></div><div><dt data-seed-info-label="characteristic"></dt><dd id="seed-info-characteristic"></dd></div><div><dt data-seed-info-label="season"></dt><dd id="seed-info-season"></dd></div></dl></section><button class="seed-info-link" id="seed-info-link" type="button" aria-expanded="false" aria-controls="seed-detail-panel">Know more about this Seed →</button><section class="seed-info-panel seed-detail-panel" id="seed-detail-panel" hidden aria-labelledby="seed-detail-name"><div class="seed-info-heading"><span class="seed-info-kicker" data-seed-info-label="details"></span><strong id="seed-detail-name"></strong></div><p id="seed-detail-summary"></p><dl class="seed-properties"><div><dt data-seed-info-label="category"></dt><dd id="seed-detail-category"></dd></div><div><dt data-seed-info-label="uses"></dt><dd id="seed-detail-uses"></dd></div><div><dt data-seed-info-label="characteristic"></dt><dd id="seed-detail-characteristic"></dd></div><div><dt data-seed-info-label="season"></dt><dd id="seed-detail-season"></dd></div></dl></section></div>
+        </section>
+      </div>
+      <nav class="page-navigation" data-page-navigation data-page="seed" aria-label="Page navigation"><div class="page-navigation-row"><button class="navigation-button" type="button" data-nav-back>← <span>Back</span></button><button class="navigation-button" type="button" data-nav-next disabled aria-disabled="true"><span>Next</span> →</button></div><span class="navigation-status" data-nav-status role="status" aria-live="polite"></span></nav>
+    </main>
+    <footer class="form-footer recommendation-footer"><span data-i18n="footer"></span> <span aria-hidden="true">•</span> SAgriVision AI</footer>
+    <script src="./i18n.js"></script><script src="./seed-analysis.js"></script><script src="./page-navigation.js"></script>
+  </body>
+</html>

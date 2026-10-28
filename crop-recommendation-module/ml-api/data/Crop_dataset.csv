@@ -1,0 +1,482 @@
+Crop_Name,Category,Water_(L/season),Sunlight,Soil_Type,Best_Climate,Harvest_Time,Season
+Acacia,Industrial,400,Full Sun,Sandy Loam,Warm and Dry,"1,095–2,190 (3–6 years)",Perennial; region-dependent
+Agarwood,Industrial,1300,Partial Shade,Clay Loam,Humid Tropical,"2,920–5,475",Perennial; region-dependent
+Agave,Industrial,300,Full Sun,Sandy/Rocky,Arid and Warm,"1,825–3,650 (5–10 years)",Perennial; region-dependent
+Agave,Industrial,300,Full Sun,Sandy/Dry,Arid and Hot,"1,825–3,650",Perennial; region-dependent
+Agave,Fiber,600,Full Sun,Sandy/Dry,Arid and Dry,"1,825–3,650",Perennial; region-dependent
+Alfalfa,Feed,600,Full Sun,Loam,Temperate,60–80 (first harvest),Perennial; region-dependent
+Alfalfa,Feed,800,Full Sun,Loam,Temperate/Subtropical,60–80 (first harvest),Perennial; region-dependent
+Alfalfa,Feed,850,Full Sun,Loam,Warm and Dry,60–80 (first harvest),Perennial; region-dependent
+Aloe Vera,Industrial,350,Full Sun,Sandy,Arid,240–365,Perennial; region-dependent
+Aloe Vera,Industrial,300,Full Sun,Sandy/Well-drained,Arid and Semi-arid,240–365,Perennial; region-dependent
+Aloe Vera,Industrial,300,Full Sun,Sandy Loam,Semi-arid,240–365,Perennial; region-dependent
+Aloe Vera,Industrial,300,Full Sun,Sandy/Well-drained,Warm and Dry,240–365,Perennial; region-dependent
+Amaranth,Food,550,Full Sun,Sandy Loam,Tropical/Subtropical,60–90,Kharif; Rabi — region-dependent
+Amaranth,Food,450,Full Sun,Sandy Loam,Tropical/Subtropical,60–90,Kharif; Rabi — region-dependent
+Amaranth,Food,500,Full Sun,Sandy Loam,Tropical/Subtropical,60–90,Kharif; Rabi — region-dependent
+Amaranth,Food,700,Full Sun,Loam,Warm and Semi-arid,60–90,Kharif; Rabi — region-dependent
+Amla (Indian Gooseberry),Medicinal,700,Full Sun,Sandy Loam,Tropical/Subtropical,"1,095–1,825",Perennial; region-dependent
+Anemone,Ornamental,650,Full Sun,Sandy Loam,Cool Temperate,90–150,Region-dependent / verify locally
+Anemone,Ornamental,700,Partial Shade,Loam,Cool and Moist,90–150,Region-dependent / verify locally
+Apple,Food,600,Full Sun,Loam,Temperate,"1,095–2,190 (3–6 years)",Perennial; region-dependent
+Apricot,Food,650,Full Sun,Sandy Loam,Temperate,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Areca Nut,Industrial,1500,Partial Shade,Laterite,Coastal Tropical,"1,825–2,555 (5–7 years)",Perennial; region-dependent
+Arecanut,Food,900,Partial Sun,Clay Loam,Humid Tropical,"1,825–2,555 (5–7 years)",Perennial; region-dependent
+Arrowroot,Food,1000,Partial Sun,Moist Sandy Loam,Humid Tropical,240–330,Multiple seasons — region-dependent
+Arugula,Food,400,Partial Sun,Well-drained Loam,Temperate,30–50,Region-dependent / verify locally
+Arugula,Food,600,Full Sun,Well-drained Loam,Cool and Moist,30–50,Region-dependent / verify locally
+Ashwagandha,Medicinal,600,Full Sun,Sandy Loam,Subtropical and Dry,150–180,Region-dependent / verify locally
+Aster,Ornamental,600,Full Sun,Loam,Cool and Mild,90–120,Region-dependent / verify locally
+Aster,Ornamental,700,Full Sun,Sandy Loam,Warm Temperate,90–120,Region-dependent / verify locally
+Avocado,Food,800,Partial Sun,Well-drained Loam,Tropical/Subtropical,"1,095–2,190 (3–6 years)",Perennial; region-dependent
+Avocado,Food,1200,Full Sun,Well-drained Loam,Humid Subtropical,"1,095–2,190 (3–6 years)",Perennial; region-dependent
+Bael,Food,400,Full Sun,Sandy Loam,Semi-arid,"1,460–2,190 (4–6 years)",Perennial; region-dependent
+Bael (Wood Apple),Food,600,Full Sun,Sandy Loam,Tropical/Subtropical,"1,460–2,190 (4–6 years)",Perennial; region-dependent
+Bambara Groundnut,Food,500,Full Sun,Sandy Loam,Subtropical and Dry,90–150,Region-dependent / verify locally
+Bamboo,Industrial,1000,Partial Shade,Sandy Clay Loam,Tropical/Subtropical,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Bamboo,Industrial,800,Full Sun,Clay Loam,Tropical/Subtropical,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Bamboo,Industrial,2000,Full Sun,Loam,Humid Tropical,"1,095–1,825",Perennial; region-dependent
+Banana,Food,900,Full Sun,Rich Loam,Tropical,270–365,Perennial; region-dependent
+Barley,Feed,500,Full Sun,Loam,Temperate,90–120,Rabi
+Barley,Feed,500,Full Sun,Loam/Well-drained,Cool Temperate,90–120,Rabi
+Barley,Feed,650,Full Sun,Well-drained Loam,Temperate and Dry,90–120,Rabi
+Barley,Food/Feed,750,Full Sun,Loam,Cool and Semi-arid,90–120,Rabi
+Barnyard Millet,Food,600,Full Sun,Sandy Loam,Humid Tropical,75–100,Kharif; region-dependent
+Barnyard Millet,Food,700,Full Sun,Loam,Tropical and Moist,75–100,Kharif; region-dependent
+Basil,Industrial,500,Full Sun,Well-drained Loam,Tropical/Subtropical,60–90,Region-dependent / verify locally
+Basil,Food,500,Full Sun,Rich Loam,Subtropical,60–90,Region-dependent / verify locally
+Basil,Medicinal,700,Full Sun,Well-drained Loam,Warm and Moist,60–90,Region-dependent / verify locally
+Basilisk Grass,Feed,800,Full Sun,Loam,Tropical and Wet,60–90 (first cut),Region-dependent / verify locally
+Bay Leaf,Food,500,Full Sun,Rich Loam,Tropical/Subtropical,"730–1,460 (2–4 years)",Region-dependent / verify locally
+Beetroot,Food,450,Full Sun,Sandy Loam,Cool,55–85,Rabi; region-dependent
+Beetroot,Food,700,Full Sun,Loam,Temperate and Moist,55–85,Rabi; region-dependent
+Begonia,Ornamental,600,Partial Shade,Sandy Loam,Warm and Humid,120–180,Region-dependent / verify locally
+Bell Pepper,Food,550,Full Sun,Sandy Loam,Warm and Humid,75–120,Multiple seasons — region-dependent
+Bermuda Grass,Feed,600,Full Sun,Sandy Loam,Warm and Dry,60–90 (first cut),Perennial; region-dependent
+Bermuda Grass,Feed,850,Full Sun,Sandy Loam,Tropical and Semi-arid,60–90 (first cut),Perennial; region-dependent
+Betel Leaf,Industrial,600,Shade,Rich Loam,Humid Subtropical,180–365,Region-dependent / verify locally
+Betel Leaf,Food,700,Shade,Moist Loam,Humid Tropical,180–365,Region-dependent / verify locally
+Betel Leaf,Industrial,1000,Partial Shade,Rich Loam,Humid Tropical,180–365,Region-dependent / verify locally
+Bitter Gourd,Food,600,Full Sun,Sandy Loam,Tropical,55–80,Zaid; other seasons possible by region
+Bitter Gourd,Food,950,Full Sun,Loam,Warm and Humid,55–80,Zaid; other seasons possible by region
+Black Gram,Food,500,Full Sun,Sandy Loam,Tropical,70–100,Kharif; Zaid — region-dependent
+Black Pepper,Industrial,1100,Shade,Loam,Humid Tropical,"1,095–1,460 (3–4 years)",Perennial; region-dependent
+Black Pepper,Food,1200,Partial Shade,Rich Loam,Humid Tropical,"1,095–1,460 (3–4 years)",Perennial; region-dependent
+Blackberry,Food,500,Full Sun,Well-drained Loam,Temperate/Subtropical,365–730 (1–2 years),Region-dependent / verify locally
+Blue Grama,Feed,450,Full Sun,Sandy Loam,Temperate and Dry,90–120 (establishment),Perennial; region-dependent
+Blueberry,Food,700,Full Sun,Acidic Sandy Loam,Cool Temperate,"730–1,460 (2–4 years)",Region-dependent / verify locally
+Borage,Medicinal,700,Full Sun,Sandy Loam,Mild Temperate,60–90,Region-dependent / verify locally
+Borage,Oil,700,Full Sun,Loam,Cool and Moist,60–90,Region-dependent / verify locally
+Bottle Gourd,Food,650,Full Sun,Loam,Tropical/Subtropical,60–90,Zaid; other seasons possible by region
+Bottle Gourd,Food,1000,Full Sun,Loam,Humid Tropical,60–90,Zaid; other seasons possible by region
+Bougainvillea,Ornamental,400,Full Sun,Sandy/Rocky Loam,Warm and Dry,365–730 (1–2 years),Region-dependent / verify locally
+Breadfruit,Food,900,Full Sun,Sandy Clay Loam,Tropical and Moist,"1,095–1,825 (3–5 years)",Region-dependent / verify locally
+Breadfruit,Food,1100,Full Sun,Sandy Loam,Tropical and Moist,"1,095–1,825 (3–5 years)",Region-dependent / verify locally
+Brinjal (Eggplant),Food,600,Full Sun,Well-drained Loam,Tropical/Subtropical,90–120,Multiple seasons — region-dependent
+Brinjal (Eggplant),Food,950,Full Sun,Loam,Warm and Humid,90–120,Multiple seasons — region-dependent
+Broccoli,Food,550,Full Sun,Well-drained Loam,Cool Temperate,80–120,Rabi; region-dependent
+Broccoli,Food,800,Full Sun,Sandy Loam,Cool Temperate,80–120,Rabi; region-dependent
+Buckwheat,Food,450,Full Sun,Sandy Loam,Temperate,70–100,Kharif; Rabi — region-dependent
+Buckwheat,Food,550,Full Sun,Sandy Loam,Cool Temperate,70–100,Kharif; Rabi — region-dependent
+Buckwheat,Food,700,Full Sun,Loam,Cool Temperate,70–100,Kharif; Rabi — region-dependent
+Cabbage,Food,500,Full Sun,Clay Loam,Cool Temperate,75–120,Rabi; region-dependent
+Cabbage,Food,800,Full Sun,Loam,Cool and Moist,75–120,Rabi; region-dependent
+Cactus,Ornamental,200,Full Sun,Sandy/Gravelly,Arid and Semi-arid,"365–1,095 (1–3 years)",Region-dependent / verify locally
+Calendula,Ornamental,450,Full Sun,Loam,Cool and Mild,60–90,Region-dependent / verify locally
+Calendula,Ornamental,500,Full Sun,Sandy Loam,Temperate and Dry,60–90,Region-dependent / verify locally
+Calendula,Medicinal,650,Full Sun,Loam,Temperate and Moist,60–90,Region-dependent / verify locally
+Camelina,Oil,500,Full Sun,Loam,Cool and Dry,85–120,Region-dependent / verify locally
+Camelina,Oil,700,Full Sun,Loam,Cool and Semi-arid,85–120,Region-dependent / verify locally
+Camellia,Ornamental,700,Partial Shade,Acidic Loam,Cool and Humid,"730–1,095",Region-dependent / verify locally
+Camphor,Industrial,900,Full Sun,Loam/Alluvial,Warm Temperate,"1,825–2,920 (5–8 years)",Region-dependent / verify locally
+Camphor,Industrial,1100,Full Sun,Loam,Warm and Moist,"1,825–2,920",Region-dependent / verify locally
+Canola,Oil,700,Full Sun,Loam,Cool Temperate,90–150,Rabi; region-dependent
+Canola,Oil,750,Full Sun,Well-drained Loam,Cool Temperate,90–150,Rabi; region-dependent
+Capsicum (Bell Pepper),Food,900,Full Sun,Sandy Loam,Warm and Moist,75–120,Multiple seasons — region-dependent
+Cardamom,Industrial,1400,Partial Shade,Loamy Forest Soil,Humid Tropical,"730–1,095 (2–3 years)",Perennial; region-dependent
+Cardamom,Industrial,1200,Shade,Rich Loam,Tropical and Moist,"730–1,095 (2–3 years)",Perennial; region-dependent
+Cardamom,Food,1500,Partial Sun,Moist Loam,Humid Tropical,"730–1,095 (2–3 years)",Perennial; region-dependent
+Carnation,Ornamental,350,Partial Shade,Well-drained Loam,Cool Temperate,120–180,Region-dependent / verify locally
+Carnation,Ornamental,450,Full Sun,Sandy Loam,Cool and Dry,120–180,Region-dependent / verify locally
+Carnation,Ornamental,600,Full Sun,Loam,Cool Temperate,120–180,Region-dependent / verify locally
+Carrot,Food,500,Full Sun,Loose Loam,Temperate,70–120,Rabi; region-dependent
+Carrot,Food,700,Full Sun,Sandy Loam,Cool and Dry,70–120,Rabi; region-dependent
+Cashew,Industrial,800,Full Sun,Sandy Loam,Coastal Tropical,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Cashew,Food,600,Full Sun,Sandy Loam,Coastal Tropical,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Cassava,Food,1000,Full Sun,Sandy Loam,Tropical/Subtropical,240–540,Multiple seasons — region-dependent
+Cassava,Food,800,Full Sun,Sandy Loam,Tropical and Dry,240–540,Multiple seasons — region-dependent
+Castor,Oil,500,Full Sun,Sandy Loam,Tropical and Dry,140–180,Kharif
+Castor,Oil,900,Full Sun,Well-drained Loam,Tropical and Semi-arid,140–180,Kharif
+Cauliflower,Food,500,Full Sun,Loam,Cool and Moist,90–150,Rabi; region-dependent
+Cauliflower,Food,800,Full Sun,Loam,Cool and Moist,90–150,Rabi; region-dependent
+Celery,Food,700,Partial Sun,Rich Loam,Cool and Moist,100–140,Region-dependent / verify locally
+Celery,Food,800,Partial Sun,Rich Loam,Cool and Moist,100–140,Region-dependent / verify locally
+Chickpeas,Food,300,Full Sun,Sandy Loam,Semi-arid,90–120,Rabi
+Chili Pepper,Food,850,Full Sun,Well-drained Loam,Warm and Dry,75–150,Multiple seasons — region-dependent
+Chive,Food,600,Full Sun,Well-drained Loam,Cool Temperate,60–90,Region-dependent / verify locally
+Chrysanthemum,Ornamental,400,Full Sun,Loam,Temperate,90–150,Region-dependent / verify locally
+Chrysanthemum,Ornamental,450,Full Sun,Loam,Cool and Mild,90–150,Region-dependent / verify locally
+Chrysanthemum,Ornamental,600,Full Sun,Sandy Loam,Mild and Dry,90–150,Region-dependent / verify locally
+Chrysanthemum,Ornamental,650,Full Sun,Well-drained Loam,Temperate and Dry,90–150,Region-dependent / verify locally
+Chrysanthemum,Ornamental,750,Full Sun,Loam,Cool Temperate,90–150,Region-dependent / verify locally
+Cinchona,Medicinal,1500,Partial Shade,Humus-rich Loam,Tropical and Cool,"2,190–2,920",Region-dependent / verify locally
+Citronella,Industrial,750,Full Sun,Loam,Tropical and Moist,120–180,Region-dependent / verify locally
+Citronella,Industrial,1000,Full Sun,Sandy Loam,Tropical and Moist,120–180,Region-dependent / verify locally
+Clove,Industrial,1000,Partial Shade,Rich Loam,Tropical,"2,190–2,920 (6–8 years)",Perennial; region-dependent
+Clove,Industrial,800,Partial Sun,Sandy Loam,Humid Tropical,"2,190–2,920 (6–8 years)",Perennial; region-dependent
+Clove,Food,1000,Partial Sun,Sandy Loam,Humid Tropical,"2,190–2,920 (6–8 years)",Perennial; region-dependent
+Clover,Feed,800,Full Sun,Loam,Cool and Moist,60–90,Perennial; region-dependent
+Cocoa,Industrial,1600,Shade,Rich Loam,Equatorial,"1,095–1,460 (3–4 years)",Perennial; region-dependent
+Cocoa,Industrial,1200,Partial Sun,Deep Loam,Humid Tropical,"1,095–1,460 (3–4 years)",Perennial; region-dependent
+Cocoa,Industrial,1800,Partial Shade,Well-drained Loam,Humid Tropical,"1,095–1,460",Perennial; region-dependent
+Coconut,Food,2000,Full Sun,Sandy Loam,Coastal Tropical,"2,190–2,920 (6–8 years)",Perennial; region-dependent
+Coffee,Industrial,1200,Partial Shade,Loam,Tropical Highlands,"1,095–1,460 (3–4 years)",Perennial; region-dependent
+Coffee,Industrial,2000,Partial Shade,Rich Loam,Warm and Humid,"1,095–1,460",Perennial; region-dependent
+Coir Palm,Fiber,1000,Full Sun,Sandy,Coastal Tropical,"2,190–2,920",Region-dependent / verify locally
+Collard Greens,Food,700,Full Sun,Loam,Cool Temperate,60–90,Region-dependent / verify locally
+Coriander,Food,400,Full Sun,Loam,Cool and Dry,45–90,Region-dependent / verify locally
+Coriander,Food,450,Full Sun,Sandy Loam,Cool and Mild,45–90,Region-dependent / verify locally
+Coriander,Food,700,Full Sun,Sandy Loam,Cool and Moist,45–90,Region-dependent / verify locally
+Cosmos,Ornamental,500,Full Sun,Sandy Loam,Tropical and Dry,60–90,Region-dependent / verify locally
+Cosmos,Ornamental,650,Full Sun,Sandy Loam,Warm and Dry,60–90,Region-dependent / verify locally
+Cotton,Fiber,700,Full Sun,Sandy Loam,Tropical/Subtropical,150–180,Kharif
+Cotton,Fiber,1200,Full Sun,Sandy Loam,Warm and Semi-arid,150–180,Kharif
+Cottonseed,Oil/Fiber,1000,Full Sun,Black Soil,Subtropical,150–180,Region-dependent / verify locally
+Cottonseed,Oil,800,Full Sun,Loam,Warm and Semi-arid,150–180,Region-dependent / verify locally
+Cowpea,Feed,500,Full Sun,Sandy Loam,Warm and Humid,60–90,Zaid; other seasons possible by region
+Cowpea,Food/Feed,500,Full Sun,Sandy Loam,Tropical and Semi-arid,60–90,Zaid; other seasons possible by region
+Crambe,Oil,800,Full Sun,Loam,Temperate and Semi-arid,90–120,Region-dependent / verify locally
+Cranberry,Food,750,Full Sun,Acidic Peaty Soil,Cool and Wet,"730–1,095 (2–3 years)",Region-dependent / verify locally
+Cucumber,Food,550,Full Sun,Sandy Loam,Warm and Moist,50–70,Zaid; other seasons possible by region
+Cucumber,Food,1000,Full Sun,Sandy Loam,Warm and Humid,50–70,Zaid; other seasons possible by region
+Custard Apple,Food,700,Full Sun,Sandy Loam,Tropical,"730–1,095 (2–3 years)",Perennial; region-dependent
+Custard Apple,Food,700,Full Sun,Sandy Loam,Warm and Dry,"730–1,095 (2–3 years)",Perennial; region-dependent
+Custard Apple,Food,700,Full Sun,Well-drained Sandy,Tropical and Dry,"730–1,095 (2–3 years)",Perennial; region-dependent
+Daffodil,Ornamental,700,Partial Shade,Loam,Cool and Moist,180–240,Region-dependent / verify locally
+Dahlia,Ornamental,500,Full Sun,Rich Loam,Cool Temperate,90–120,Region-dependent / verify locally
+Dahlia,Ornamental,600,Full Sun,Rich Loam,Temperate and Moist,90–120,Region-dependent / verify locally
+Dahlia,Ornamental,750,Full Sun,Loam,Cool and Moist,90–120,Region-dependent / verify locally
+Daikon,Food,750,Full Sun,Sandy Loam,Subtropical and Cool,50–80,Region-dependent / verify locally
+Dill,Food,350,Full Sun,Sandy Loam,Mild Temperate,40–70,Region-dependent / verify locally
+Dill,Food,500,Full Sun,Sandy Loam,Warm and Dry,40–70,Region-dependent / verify locally
+Dill,Medicinal,700,Full Sun,Sandy Loam,Temperate and Dry,40–70,Region-dependent / verify locally
+Dragon Fruit,Food,600,Full Sun,Sandy/Well-drained,Warm and Dry,365–540,Perennial; region-dependent
+Drumstick (Moringa),Food,500,Full Sun,Sandy Loam,Warm and Semi-arid,180–240,Region-dependent / verify locally
+Einkorn Wheat,Food,700,Full Sun,Loam,Cool and Dry,120–150,Region-dependent / verify locally
+Emmer Wheat,Food,700,Full Sun,Loam,Temperate and Semi-arid,120–150,Region-dependent / verify locally
+Endive,Food,550,Full Sun,Sandy Loam,Temperate and Moist,80–100,Region-dependent / verify locally
+Eucalyptus,Industrial,500,Full Sun,Clay Loam,Tropical/Subtropical,"1,825–3,650 (5–10 years)",Region-dependent / verify locally
+Eucalyptus,Industrial,1200,Full Sun,Sandy Loam,Warm and Dry,"1,825–3,650",Region-dependent / verify locally
+Fenugreek,Food,400,Full Sun,Sandy Loam,Temperate/Subtropical,90–120,Rabi; region-dependent
+Fenugreek,Food,500,Full Sun,Sandy Loam,Cool and Dry,90–120,Rabi; region-dependent
+Fenugreek,Food,650,Full Sun,Sandy Loam,Cool and Dry,90–120,Rabi; region-dependent
+Fig,Food,500,Full Sun,Loam/Calcareous,Warm and Dry,365–730 (1–2 years),Perennial; region-dependent
+Fig,Food,400,Full Sun,Well-drained Loam,Warm and Dry,365–730 (1–2 years),Perennial; region-dependent
+Fig,Food,800,Full Sun,Sandy Loam,Subtropical and Dry,365–730 (1–2 years),Perennial; region-dependent
+Finger Millet,Food,600,Full Sun,Red Sandy Loam,Tropical/Subtropical,100–130,Kharif; region-dependent
+Finger Millet,Food,700,Full Sun,Sandy Loam,Warm and Dry,100–130,Kharif; region-dependent
+Flax,Fiber,500,Full Sun,Loam,Cool Temperate,90–120,Rabi
+Flax,Fiber,800,Full Sun,Sandy Loam,Temperate and Moist,90–120,Rabi
+Flax,Fiber,800,Full Sun,Loam,Cool Temperate,90–120,Rabi
+Flax,Oil/Fiber,600,Full Sun,Sandy Loam,Temperate,90–120,Rabi
+Fonio,Food,500,Full Sun,Sandy Loam,Arid and Tropical,60–90,Region-dependent / verify locally
+Fonio,Food,700,Full Sun,Sandy Loam,Tropical and Semi-arid,60–90,Region-dependent / verify locally
+Foxglove,Ornamental,500,Partial Shade,Moist Loam,Temperate and Humid,120–180,Region-dependent / verify locally
+Foxglove,Ornamental,600,Partial Shade,Well-drained Loam,Temperate and Moist,120–180,Region-dependent / verify locally
+Foxtail Millet,Food,550,Full Sun,Sandy Loam,Semi-arid,75–110,Kharif; region-dependent
+Foxtail Millet,Food,700,Full Sun,Sandy Loam,Temperate and Dry,75–110,Kharif; region-dependent
+Garlic,Food,500,Full Sun,Sandy Loam,Temperate,120–180,Rabi; region-dependent
+Garlic,Food,700,Full Sun,Sandy Loam,Cool and Dry,120–180,Rabi; region-dependent
+Geranium,Ornamental,500,Full Sun,Sandy Loam,Temperate,120–180,Region-dependent / verify locally
+Gerbera,Ornamental,500,Full Sun,Well-drained Loam,Temperate/Subtropical,90–120,Region-dependent / verify locally
+Gerbera,Ornamental,700,Full Sun,Loam,Tropical and Moist,90–120,Region-dependent / verify locally
+Gerbera,Ornamental,750,Full Sun,Sandy Loam,Warm and Moist,90–120,Region-dependent / verify locally
+Ginger,Industrial,1100,Partial Shade,Loam,Tropical/Subtropical,210–270,Kharif/monsoon planting; region-dependent
+Ginger,Industrial,1000,Partial Sun,Loam,Humid Tropical,210–270,Kharif/monsoon planting; region-dependent
+Ginger,Food,1100,Partial Shade,Well-drained Loam,Tropical and Moist,210–270,Kharif/monsoon planting; region-dependent
+Ginger,Food,1000,Partial Shade,Rich Loam,Tropical and Moist,210–270,Kharif/monsoon planting; region-dependent
+Gladiolus,Ornamental,550,Full Sun,Sandy Loam,Temperate,90–120,Region-dependent / verify locally
+Gladiolus,Ornamental,700,Full Sun,Sandy Loam,Warm and Dry,90–120,Region-dependent / verify locally
+Gladiolus,Ornamental,800,Full Sun,Loam,Warm and Dry,90–120,Region-dependent / verify locally
+Gooseberry,Food,450,Full Sun,Well-drained Loam,Tropical,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Amla (Indian Gooseberry),Food,450,Full Sun,Loam,Tropical,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Amla (Indian Gooseberry),Food,600,Full Sun,Sandy Loam,Tropical/Subtropical,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Grapes,Food,800,Full Sun,Sandy Clay Loam,Mediterranean,"730–1,095 (2–3 years)",Perennial; region-dependent
+Ground Orchid,Ornamental,600,Partial Sun,Sandy Loam,Warm and Humid,"730–1,460 (2–4 years)",Region-dependent / verify locally
+Groundnut,Oil,550,Full Sun,Sandy Loam,Semi-arid,90–130,Kharif
+Groundnut (Peanut),Oil,600,Full Sun,Sandy Loam,Warm and Moist,90–130,Kharif
+Groundnut (Peanut),Oil,850,Full Sun,Sandy Loam,Warm and Semi-arid,90–130,Kharif
+Guar,Industrial,800,Full Sun,Sandy Loam,Arid and Semi-arid,90–120,Kharif
+Guava,Food,600,Full Sun,Well-drained Loam,Tropical/Subtropical,"730–1,095 (2–3 years)",Perennial; region-dependent
+Guava,Food,600,Full Sun,Sandy Loam,Subtropical,"730–1,095 (2–3 years)",Perennial; region-dependent
+Guinea Grass,Feed,700,Full Sun,Clay Loam,Tropical,60–90 (first cut),Perennial; region-dependent
+Guinea Grass,Feed,850,Full Sun,Well-drained Loam,Humid Tropical,60–90 (first cut),Perennial; region-dependent
+Hemp,Fiber,600,Full Sun,Well-drained Loam,Temperate,90–150,Region-dependent / verify locally
+Hemp (for oil),Oil/Industrial,900,Full Sun,Loam,Temperate and Moist,90–150,Region-dependent / verify locally
+Henna,Industrial,400,Full Sun,Sandy Loam,Arid and Semi-arid,240–365,Region-dependent / verify locally
+Henna,Industrial,400,Full Sun,Sandy Loam,Warm and Dry,240–365,Region-dependent / verify locally
+Henna,Industrial,800,Full Sun,Sandy Loam,Dry and Hot,240–365,Region-dependent / verify locally
+Hibiscus,Ornamental,600,Full Sun,Sandy Loam,Tropical,180–365,Region-dependent / verify locally
+Hibiscus,Ornamental,800,Full Sun,Sandy Loam,Humid Tropical,180–365,Region-dependent / verify locally
+Horsegram,Food,450,Full Sun,Sandy Loam,Warm and Semi-arid,120–180,Region-dependent / verify locally
+Hyacinth,Ornamental,700,Partial Shade,Well-drained Loam,Cool and Moist,180–240,Region-dependent / verify locally
+Iceberg Lettuce,Food,600,Partial Sun,Sandy Loam,Cool Temperate,70–90,Rabi; region-dependent
+Indigo,Industrial,600,Full Sun,Sandy Loam,Subtropical and Dry,120–180,Region-dependent / verify locally
+Indigo,Industrial,850,Full Sun,Sandy Loam,Warm and Dry,120–180,Region-dependent / verify locally
+Iris,Ornamental,700,Full Sun,Sandy Loam,Temperate and Humid,180–365,Region-dependent / verify locally
+Ivy Gourd,Food,900,Full Sun,Sandy Loam,Humid Tropical,120–180,Region-dependent / verify locally
+Jackfruit,Food,1200,Full Sun,Loam,Humid Tropical,"1,095–2,190 (3–6 years)",Perennial; region-dependent
+Jackfruit,Food,800,Full Sun,Deep Loam,Tropical,"1,095–2,190 (3–6 years)",Perennial; region-dependent
+Jackfruit,Food,1100,Full Sun,Sandy Loam,Humid Tropical,"1,095–2,190 (3–6 years)",Perennial; region-dependent
+Jamun,Food,600,Full Sun,Loam/Alluvial,Tropical/Subtropical,"2,190–2,920 (6–8 years)",Perennial; region-dependent
+Jasmine,Ornamental,500,Full Sun,Sandy Loam,Warm and Humid,180–365,Region-dependent / verify locally
+Jute,Fiber,1500,Full Sun,Clay Loam,Humid Subtropical,120–150,Kharif
+Jute,Fiber,1500,Full Sun,Clay Loam,Humid Tropical,120–150,Kharif
+Kale,Food,500,Full Sun,Well-drained Loam,Cool and Humid,50–90,Rabi; region-dependent
+Kale,Food,700,Full Sun,Loam,Cool Temperate,50–90,Rabi; region-dependent
+Kale,Food,750,Full Sun,Loam,Cool and Moist,50–90,Rabi; region-dependent
+Kenaf,Fiber,700,Full Sun,Clay Loam,Tropical/Subtropical,120–150,Region-dependent / verify locally
+Kenaf,Fiber,1000,Full Sun,Sandy Loam,Humid Tropical,120–150,Region-dependent / verify locally
+Kenaf,Fiber,950,Full Sun,Sandy Loam,Warm and Wet,120–150,Region-dependent / verify locally
+Khorasan Wheat,Food,750,Full Sun,Loam,Semi-arid,120–150,Region-dependent / verify locally
+Kidney Beans,Food,700,Full Sun,Well-drained Loam,Temperate,90–120,Region-dependent / verify locally
+Kiwi,Food,1000,Partial Sun,Rich Loam,Cool Temperate,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Kodo Millet,Food,500,Full Sun,Red Sandy Loam,Tropical and Semi-arid,100–120,Kharif; region-dependent
+Kodo Millet,Food,700,Full Sun,Sandy Loam,Semi-arid,100–120,Kharif; region-dependent
+Kohlrabi,Food,500,Full Sun,Loam,Cool and Moist,50–70,Rabi; region-dependent
+Kohlrabi,Food,750,Full Sun,Sandy Loam,Cool and Moist,50–70,Rabi; region-dependent
+Kudzu,Feed,900,Full Sun,Fertile Loam,Humid Tropical,90–180,Perennial; region-dependent
+Langsat,Food,1000,Partial Sun,Sandy Loam,Tropical and Moist,"1,825–2,920 (5–8 years)",Region-dependent / verify locally
+Larkspur,Ornamental,550,Full Sun,Well-drained Loam,Cool Temperate,90–120,Region-dependent / verify locally
+Lavender,Ornamental,350,Full Sun,Sandy/Rocky Loam,Mediterranean,180–365,Region-dependent / verify locally
+Lavender,Industrial,450,Full Sun,Sandy/Well-drained,Mediterranean,180–365,Region-dependent / verify locally
+Lavender,Ornamental,600,Full Sun,Sandy Loam,Cool and Dry,180–365,Region-dependent / verify locally
+Leek,Food,700,Full Sun,Loam,Cool and Moist,120–150,Rabi; region-dependent
+Lemongrass,Industrial,700,Full Sun,Sandy Loam,Warm and Humid,90–120,Region-dependent / verify locally
+Lemongrass,Industrial,1000,Full Sun,Sandy Loam,Warm and Humid,90–120,Region-dependent / verify locally
+Lentil,Food,400,Full Sun,Clay Loam,Cool and Dry,100–130,Rabi
+Lettuce,Food,500,Partial Sun,Loam,Cool,45–75,Rabi; region-dependent
+Lettuce,Food,750,Partial Shade,Loam,Cool and Moist,45–75,Rabi; region-dependent
+Flax,Oil,500,Full Sun,Sandy Loam,Cool and Dry,90–120,Rabi
+Flax,Oil,800,Full Sun,Loam,Temperate and Dry,90–120,Rabi
+Little Millet,Food,550,Full Sun,Sandy Loam,Warm and Dry,90–120,Kharif; region-dependent
+Little Millet,Food,700,Full Sun,Sandy Loam,Tropical and Semi-arid,90–120,Kharif; region-dependent
+Longan,Food,1000,Full Sun,Well-drained Loam,Humid Tropical,"1,825–2,555 (5–7 years)",Perennial; region-dependent
+Lotus,Ornamental,1500,Full Sun,Clayey/Muddy,Tropical Wetland,120–180,Region-dependent / verify locally
+Lotus Root,Food,1600,Full Sun,Clay/Loam Underwater,Humid Tropical,120–180,Region-dependent / verify locally
+Lotus Root,Food,1200,Full Sun,Clay/Rich Organic,Tropical Wetland,120–180,Region-dependent / verify locally
+Alfalfa,Feed,800,Full Sun,Loam,Subtropical,60–80 (first harvest),Perennial; region-dependent
+Lychee,Food,1000,Full Sun,Sandy Loam,Humid Subtropical,"1,460–1,825 (4–5 years)",Perennial; region-dependent
+Lychee,Food,900,Full Sun,Loam,Humid Subtropical,"1,460–1,825 (4–5 years)",Perennial; region-dependent
+Maize,Food,600,Full Sun,Sandy Loam,Warm Temperate,90–120,Kharif; Rabi; Zaid — region-dependent
+Mango,Food,1200,Full Sun,Sandy Loam,Tropical/Subtropical,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Mangosteen,Food,1000,Partial Sun,Rich Loam,Tropical and Moist,"2,555–4,380 (7–12 years)",Perennial; region-dependent
+Mangosteen,Food,1200,Partial Shade,Rich Loam,Humid Tropical,"2,555–4,380 (7–12 years)",Perennial; region-dependent
+Marigold,Ornamental,300,Full Sun,Well-drained Loam,Tropical/Subtropical,60–90,Region-dependent / verify locally
+Millet,Feed,350,Full Sun,Sandy Loam,Arid and Semi-arid,70–120,Region-dependent / verify locally
+Mint,Food,550,Partial Sun,Moist Loam,Subtropical,60–90,Region-dependent / verify locally
+Mint,Medicinal,800,Partial Shade,Sandy Loam,Cool and Moist,60–90,Region-dependent / verify locally
+Morning Glory,Ornamental,600,Full Sun,Sandy Loam,Warm and Moist,60–90,Region-dependent / verify locally
+Moth Beans,Food,300,Full Sun,Sandy,Arid and Semi-arid,75–90,Kharif; Zaid — region-dependent
+Mulberry,Feed/Fiber,700,Full Sun,Sandy Loam,Subtropical,365–730 (1–2 years),Perennial; region-dependent
+Mulberry,Industrial,1000,Full Sun,Loam,Humid Subtropical,365–730 (1–2 years),Perennial; region-dependent
+Mung Beans,Food,500,Full Sun,Sandy Loam,Warm and Dry,60–90,Zaid; other seasons possible by region
+Muskmelon,Food,450,Full Sun,Sandy,Warm,75–100,Zaid; other seasons possible by region
+Mustard,Oil,750,Full Sun,Loam,Cool and Dry,90–140,Rabi
+Mustard Greens,Food,500,Full Sun,Sandy Loam,Cool Temperate,40–60,Rabi; region-dependent
+Mustard Greens,Food,750,Full Sun,Sandy Loam,Cool and Moist,40–60,Rabi; region-dependent
+Napier Grass,Feed,1000,Full Sun,Loam,Tropical,75–90 (first cut),Perennial; region-dependent
+Napier Grass,Feed,900,Full Sun,Sandy Loam,Tropical,75–90 (first cut),Perennial; region-dependent
+Napier Grass,Feed,900,Full Sun,Sandy Loam,Tropical and Moist,75–90 (first cut),Perennial; region-dependent
+Nasturtium,Ornamental,450,Full Sun,Sandy Loam,Warm Temperate,50–70,Region-dependent / verify locally
+Neem,Industrial,300,Full Sun,Sandy/Alluvial,Tropical,"1,460–2,190 (4–6 years)",Region-dependent / verify locally
+Neem,Medicinal,500,Full Sun,Sandy Loam,Dry and Hot,"1,460–2,190",Region-dependent / verify locally
+Niger Seed,Oil,750,Full Sun,Sandy Loam,Warm and Moist,90–120,Kharif
+Noni,Food,900,Full Sun,Sandy Loam,Tropical and Moist,365–730 (1–2 years),Region-dependent / verify locally
+Nutmeg,Industrial,900,Partial Sun,Sandy Loam,Warm and Moist,"2,555–3,650 (7–10 years)",Perennial; region-dependent
+Nutmeg,Food,1200,Partial Shade,Rich Loam,Humid Tropical,"2,555–3,650 (7–10 years)",Perennial; region-dependent
+Oats,Feed,500,Full Sun,Loam,Cool Temperate,90–120,Rabi
+Oats,Feed,700,Full Sun,Loam/Alluvial,Cool and Moist,90–120,Rabi
+Oats,Food/Feed,750,Full Sun,Loam,Cool and Moist,90–120,Rabi
+Okra,Food,800,Full Sun,Sandy Loam,Warm and Humid,50–65,Multiple seasons — region-dependent
+Olive,Oil,750,Full Sun,Rocky/Calcareous,Mediterranean,"1,095–2,190 (3–6 years)",Perennial; region-dependent
+Olive,Oil,500,Full Sun,Well-drained Loam,Mediterranean,"1,095–2,190 (3–6 years)",Perennial; region-dependent
+Onion,Food,600,Full Sun,Sandy Loam,Cool to Warm,90–150,Rabi; region-dependent
+Onion,Food,750,Full Sun,Sandy Loam,Temperate and Dry,90–150,Rabi; region-dependent
+Orange,Food,700,Full Sun,Sandy Loam,Subtropical,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Orchid,Ornamental,600,Partial Sun,"Moist, Well-drained",Humid Tropical,"730–1,460 (2–4 years)",Region-dependent / verify locally
+Oregano,Food,400,Full Sun,Well-drained Loam,Temperate and Dry,90–120,Region-dependent / verify locally
+Pak Choi,Food,450,Partial Sun,Moist Loam,Cool and Moist,40–60,Region-dependent / verify locally
+Pak Choi (Bok Choy),Food,750,Partial Sun,Loam,Cool and Humid,40–60,Region-dependent / verify locally
+Palmarosa,Industrial,700,Full Sun,Loam,Humid Subtropical,120–150,Region-dependent / verify locally
+Palmarosa,Industrial,1100,Full Sun,Loam,Humid Tropical,120–150,Region-dependent / verify locally
+Papaya,Food,500,Full Sun,Loam,Tropical,240–330,Perennial; region-dependent
+Parsley,Food,450,Partial Sun,Loam,Temperate,70–90,Region-dependent / verify locally
+Parsley,Food,500,Partial Sun,Moist Loam,Temperate,70–90,Region-dependent / verify locally
+Parsnip,Food,700,Full Sun,Sandy Loam,Cool Temperate,100–130,Rabi; region-dependent
+Parsnip,Food,750,Full Sun,Loam,Cool Temperate,100–130,Rabi; region-dependent
+Passion Fruit,Food,800,Partial Sun,Loam,Tropical,180–365,Perennial; region-dependent
+Passion Fruit,Food,900,Full Sun,Loam,Humid Tropical,180–365,Perennial; region-dependent
+Patchouli,Industrial,1100,Partial Sun,Loam,Humid Tropical,180–240,Region-dependent / verify locally
+Peach,Food,600,Full Sun,Well-drained Loam,Temperate,"730–1,460 (2–4 years)",Perennial; region-dependent
+Groundnut (Peanut),Oil,850,Full Sun,Sandy Loam,Warm and Dry,90–130,Kharif
+Groundnut (Peanut),Oil,800,Full Sun,Sandy Loam,Warm and Moist,90–130,Kharif
+Pear,Food,600,Full Sun,Sandy Loam,Temperate,"1,095–2,190 (3–6 years)",Perennial; region-dependent
+Pearl Millet,Feed,300,Full Sun,Sandy Loam,Arid,75–120,Kharif; region-dependent
+Pearl Millet,Food/Feed,500,Full Sun,Sandy Loam,Arid and Semi-arid,75–120,Kharif; region-dependent
+Pearl Millet,Food,600,Full Sun,Sandy Loam,Arid and Warm,75–120,Kharif; region-dependent
+Pearl Millet,Food/Feed,700,Full Sun,Sandy Loam,Arid and Hot,75–120,Kharif; region-dependent
+Peony,Ornamental,750,Full Sun,Loam,Cool Temperate,"730–1,460",Region-dependent / verify locally
+Perilla,Oil,700,Full Sun,Sandy Loam,Warm Temperate,90–120,Region-dependent / verify locally
+Periwinkle,Ornamental,450,Full Sun,Sandy Loam,Subtropical,120–180,Region-dependent / verify locally
+Periwinkle,Medicinal,600,Full Sun,Sandy Loam,Tropical/Subtropical,120–180,Region-dependent / verify locally
+Persimmon,Food,700,Full Sun,Loam,Mild Temperate,"1,095–2,190 (3–6 years)",Region-dependent / verify locally
+Petunia,Ornamental,400,Full Sun,Sandy/Well-drained,Subtropical,70–100,Region-dependent / verify locally
+Petunia,Ornamental,500,Full Sun,Sandy Loam,Warm Temperate,70–100,Region-dependent / verify locally
+Petunia,Ornamental,600,Full Sun,Sandy Loam,Warm and Mild,70–100,Region-dependent / verify locally
+Petunia,Ornamental,700,Full Sun,Loam,Warm and Sunny,70–100,Region-dependent / verify locally
+Pigeon Peas,Food,600,Full Sun,Loam,Subtropical,120–240,Kharif
+Pineapple,Food,1000,Full Sun,Sandy Loam,Tropical,450–720,Perennial; region-dependent
+Pineapple,Food,650,Full Sun,Sandy Loam,Tropical,450–720,Perennial; region-dependent
+Pineapple,Food,800,Full Sun,Sandy Loam,Tropical,450–720,Perennial; region-dependent
+Plum,Food,650,Full Sun,Loam,Cool Temperate,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Potato,Food,1000,Full Sun,Loam,Cool and Moist,70–120,Rabi; region-dependent
+Proso Millet,Food,600,Full Sun,Sandy Loam,Temperate and Dry,60–100,Kharif; region-dependent
+Proso Millet,Food,700,Full Sun,Sandy Loam,Warm and Dry,60–100,Kharif; region-dependent
+Pumpkin,Food,700,Full Sun,Sandy Loam,Warm,90–140,Zaid; other seasons possible by region
+Pumpkin,Food,1000,Full Sun,Loam,Warm and Moist,90–140,Zaid; other seasons possible by region
+Purslane,Food,450,Full Sun,Sandy Loam,Warm and Dry,30–60,Region-dependent / verify locally
+Quinoa,Food,400,Full Sun,Well-drained Sandy,Cool and Dry,90–120,Rabi; region-dependent
+Quinoa,Food,500,Full Sun,Well-drained Loam,Cool Temperate,90–120,Rabi; region-dependent
+Radicchio,Food,550,Full Sun,Loam,Cool Temperate,80–120,Region-dependent / verify locally
+Radish,Food,400,Full Sun,Sandy Loam,Cool and Dry,25–60,Rabi; region-dependent
+Radish,Food,650,Full Sun,Sandy Loam,Cool and Moist,25–60,Rabi; region-dependent
+Rambutan,Food,1000,Full Sun,Fertile Loam,Humid Tropical,"1,825–2,555 (5–7 years)",Perennial; region-dependent
+Rambutan,Food,1100,Partial Sun,Moist Loam,Humid Tropical,"1,825–2,555 (5–7 years)",Perennial; region-dependent
+Ramie,Fiber,900,Full Sun,Clay/Alluvial,Tropical/Subtropical,180–240,Region-dependent / verify locally
+Ramie,Fiber,900,Full Sun,Loam,Tropical/Subtropical,180–240,Region-dependent / verify locally
+Ramie,Fiber,900,Full Sun,Loam,Tropical and Moist,180–240,Region-dependent / verify locally
+Raspberry,Food,500,Full Sun,Sandy Loam,Temperate,365–730 (1–2 years),Region-dependent / verify locally
+Red Clover,Feed,750,Full Sun,Well-drained Loam,Cool and Moist,60–90,Perennial; region-dependent
+Rice,Food,2500,Full Sun,Clayey,Tropical/Subtropical,120–150,Kharif; Rabi; Zaid — region-dependent
+Ridge Gourd,Food,950,Full Sun,Loam,Warm and Moist,60–90,Zaid; other seasons possible by region
+Romaine Lettuce,Food,600,Full Sun,Loam,Cool and Moist,60–80,Rabi; region-dependent
+Rose,Ornamental,500,Full Sun,Rich Loam,Temperate/Subtropical,180–365,Region-dependent / verify locally
+Rose,Ornamental,600,Full Sun,Loam,Cool to Warm,180–365,Region-dependent / verify locally
+Rose,Ornamental,700,Full Sun,Loam,Cool and Moist,180–365,Region-dependent / verify locally
+Rose,Ornamental,800,Full Sun,Loam,Temperate and Humid,180–365,Region-dependent / verify locally
+Rosemary,Food,400,Full Sun,Sandy Loam,Subtropical,120–180,Region-dependent / verify locally
+Rosemary,Medicinal,600,Full Sun,Sandy Loam,Warm and Dry,120–180,Region-dependent / verify locally
+Rubber,Industrial,2000,Full Sun,Laterite,Humid Tropical,"2,190–2,920 (6–8 years)",Perennial; region-dependent
+Rubber,Industrial,1200,Full Sun,Loam,Humid Tropical,"2,190–2,920 (6–8 years)",Perennial; region-dependent
+Rubber Tree,Industrial,2500,Partial Sun,Laterite/Loam,Humid Tropical,"2,190–2,920",Perennial; region-dependent
+Rutabaga,Food,700,Full Sun,Loam,Cool and Moist,90–120,Region-dependent / verify locally
+Rye,Feed,450,Full Sun,Well-drained Loam,Cool Temperate,120–150,Rabi
+Rye,Food/Feed,700,Full Sun,Sandy Loam,Cool and Dry,120–150,Rabi
+Rye,Food/Feed,750,Full Sun,Sandy Loam,Cool and Dry,120–150,Rabi
+Ryegrass,Feed,600,Full Sun,Clay Loam,Temperate,60–90,Perennial; region-dependent
+Ryegrass,Feed,700,Full Sun,Moist Loam,Cool Temperate,60–90,Perennial; region-dependent
+Ryegrass,Feed,800,Full Sun,Loam,Cool and Moist,60–90,Perennial; region-dependent
+Safflower,Oil,400,Full Sun,Sandy Loam,Arid and Dry,120–150,Rabi
+Safflower,Oil,600,Full Sun,Sandy Loam,Arid and Semi-arid,120–150,Rabi
+Safflower,Oil,850,Full Sun,Sandy Loam,Arid and Dry,120–150,Rabi
+Safflower,Oil,750,Full Sun,Sandy Loam,Semi-arid,120–150,Rabi
+Sage,Food,450,Full Sun,Sandy Loam,Cool and Dry,75–120,Region-dependent / verify locally
+Sage,Medicinal,650,Full Sun,Sandy Loam,Warm and Dry,75–120,Region-dependent / verify locally
+Sapodilla (Chikoo),Food,700,Full Sun,Sandy Loam,Tropical and Dry,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Sapodilla (Chikoo),Food,800,Full Sun,Sandy Loam,Tropical,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Sapodilla (Chikoo),Food,900,Full Sun,Sandy Loam,Tropical/Subtropical,"1,095–1,825 (3–5 years)",Perennial; region-dependent
+Sesame,Oil,600,Full Sun,Sandy Loam,Tropical and Dry,90–150,Kharif
+Sesame,Oil,700,Full Sun,Sandy Loam,Tropical and Warm,90–150,Kharif
+Sesame,Oil,700,Full Sun,Sandy Loam,Dry and Hot,90–150,Kharif
+Shallot,Food,700,Full Sun,Loam,Cool Temperate,90–120,Region-dependent / verify locally
+Shatavari,Medicinal,800,Partial Sun,Sandy Loam,Humid Tropical,540–720,Region-dependent / verify locally
+Snake Gourd,Food,950,Full Sun,Sandy Loam,Warm and Moist,90–120,Region-dependent / verify locally
+Snapdragon,Ornamental,550,Full Sun,Loam,Cool and Dry,90–120,Region-dependent / verify locally
+Snapdragon,Ornamental,600,Full Sun,Well-drained Loam,Cool Temperate,90–120,Region-dependent / verify locally
+Sorghum,Feed,400,Full Sun,Sandy Loam,Semi-arid,90–120,Kharif; region-dependent
+Sorghum,Feed,400,Full Sun,Sandy Loam,Semi-arid and Dry,90–120,Kharif; region-dependent
+Sorghum,Food/Feed,600,Full Sun,Sandy Loam,Warm and Dry,90–120,Kharif; region-dependent
+Sorghum,Food/Feed,700,Full Sun,Sandy Loam,Dry and Hot,90–120,Kharif; region-dependent
+Sorrel,Food,600,Full Sun,Well-drained Loam,Subtropical and Dry,60–90,Region-dependent / verify locally
+Soybean,Oil,500,Full Sun,Loam,Temperate,90–120,Kharif
+Soybean,Oil,650,Full Sun,Clay Loam,Temperate and Humid,90–120,Kharif
+Soybean,Oil/Feed,900,Full Sun,Loam,Temperate,90–120,Kharif
+Soybean,Oil,900,Full Sun,Loam,Warm and Humid,90–120,Kharif
+Soybean,Oil/Food,850,Full Sun,Loam,Warm and Moist,90–120,Kharif
+Spelt,Food,750,Full Sun,Loam,Cool Temperate,120–150,Region-dependent / verify locally
+Spinach,Food,450,Partial Sun,Sandy Loam,Temperate,30–50,Rabi; region-dependent
+Spinach,Food,700,Partial Shade,Loam,Cool and Moist,30–50,Rabi; region-dependent
+Squash,Food,950,Full Sun,Sandy Loam,Warm and Moist,50–100,Zaid; other seasons possible by region
+Starfruit,Food,750,Full Sun,Sandy Loam,Humid Tropical,"730–1,095 (2–3 years)",Perennial; region-dependent
+Stevia,Industrial,500,Full Sun,Sandy Loam,Tropical/Subtropical,90–120,Region-dependent / verify locally
+Strawberry,Food,600,Full Sun,Sandy Loam,Cool and Humid,90–150,Region-dependent / verify locally
+Stylosanthes,Feed,500,Full Sun,Well-drained Loam,Semi-arid,90–120,Perennial; region-dependent
+Stylosanthes Hamata,Feed,600,Full Sun,Sandy Loam,Semi-arid,90–120,Perennial; region-dependent
+Sudan Grass,Feed,700,Full Sun,Sandy Loam,Warm and Dry,60–90,Perennial; region-dependent
+Sudan Grass,Feed,850,Full Sun,Loam,Warm and Dry,60–90,Perennial; region-dependent
+Sugar Beet,Food,700,Full Sun,Sandy Loam,Temperate,150–210,Region-dependent / verify locally
+Sugar Beet,Industrial,1000,Full Sun,Loam,Cool Temperate,150–210,Region-dependent / verify locally
+Sugarcane,Industrial,1800,Full Sun,Alluvial,Tropical,300–540,Multiple seasons — region-dependent
+Sunflower,Oil,600,Full Sun,Well-drained Loam,Warm and Sunny,80–120,Region-dependent / verify locally
+Sunflower,Oil,700,Full Sun,Loam,Temperate to Warm,80–120,Region-dependent / verify locally
+Sunflower,Oil,800,Full Sun,Loam,Warm Temperate,80–120,Region-dependent / verify locally
+Sunflower,Oil,900,Full Sun,Loam,Warm and Semi-arid,80–120,Region-dependent / verify locally
+Sunhemp,Fiber,850,Full Sun,Loam,Warm and Moist,90–120,Kharif
+Sunn Hemp,Fiber,1000,Full Sun,Sandy Loam,Tropical/Subtropical,90–120,Kharif
+Sweet Alyssum,Ornamental,650,Full Sun,Well-drained Loam,Temperate and Moist,50–70,Region-dependent / verify locally
+Sweet Pea,Ornamental,500,Full Sun,Sandy Loam,Cool and Moist,70–120,Region-dependent / verify locally
+Sweet Potato,Food,700,Full Sun,Sandy Loam,Tropical/Subtropical,90–150,Multiple seasons — region-dependent
+Sweet Potato,Food,850,Full Sun,Sandy Loam,Warm and Humid,90–150,Multiple seasons — region-dependent
+Swiss Chard,Food,450,Full Sun,Loam,Mild and Moist,50–70,Region-dependent / verify locally
+Swiss Chard,Food,700,Full Sun,Loam,Temperate and Moist,50–70,Region-dependent / verify locally
+Tamarillo,Food,600,Full Sun,Well-drained Loam,Subtropical,365–540,Region-dependent / verify locally
+Tamarind,Food,500,Full Sun,Sandy Loam,Dry Tropical,"2,190–2,920 (6–8 years)",Perennial; region-dependent
+Tamarind,Food,500,Full Sun,Sandy Loam,Tropical,"2,190–2,920 (6–8 years)",Perennial; region-dependent
+Tamarind,Food,800,Full Sun,Sandy Loam,Tropical and Dry,"2,190–2,920 (6–8 years)",Perennial; region-dependent
+Taro,Food,1300,Partial Sun,Wet Loam,Tropical and Moist,180–300,Multiple seasons — region-dependent
+Taro,Food,900,Partial Sun,Clay Loam,Tropical and Moist,180–300,Multiple seasons — region-dependent
+Tarragon,Food,400,Full Sun,Well-drained Loam,Warm Temperate,90–120,Region-dependent / verify locally
+Tea,Industrial,1500,Partial Shade,Acidic Loam,Tropical Highlands,"1,095–1,460 (3–4 years)",Perennial; region-dependent
+Tea,Industrial,1000,Partial Sun,Acidic Loam,Humid Subtropical,"1,095–1,460 (3–4 years)",Perennial; region-dependent
+Tea,Industrial,2200,Partial Shade,Acidic Loam,Cool and Humid,"1,095–1,460",Perennial; region-dependent
+Teff,Food,600,Full Sun,Well-drained Loam,Warm Temperate,90–120,Region-dependent / verify locally
+Teff,Food,750,Full Sun,Loam,Temperate and Dry,90–120,Region-dependent / verify locally
+Thyme,Food,350,Full Sun,Sandy Loam,Warm and Dry,75–120,Region-dependent / verify locally
+Thyme,Medicinal,600,Full Sun,Well-drained Loam,Mediterranean,75–120,Region-dependent / verify locally
+Timothy Grass,Feed,800,Full Sun,Loam,Cool and Moist,60–90,Perennial; region-dependent
+Tobacco,Industrial,800,Full Sun,Sandy Loam,Tropical/Subtropical,90–150,Rabi; region-dependent
+Tobacco,Industrial,900,Full Sun,Sandy Loam,Tropical and Dry,90–150,Rabi; region-dependent
+Tobacco,Industrial,1000,Full Sun,Sandy Loam,Warm and Dry,90–150,Rabi; region-dependent
+Tomato,Food,600,Full Sun,Sandy Loam,Tropical/Subtropical,60–100,Multiple seasons — region-dependent
+Tomato,Food,1000,Full Sun,Sandy Loam,Warm and Humid,60–100,Multiple seasons — region-dependent
+Triticale,Feed,600,Full Sun,Loam,Temperate,110–140,Region-dependent / verify locally
+Tuberose,Ornamental,600,Full Sun,Well-drained Loam,Tropical/Subtropical,90–120,Region-dependent / verify locally
+Tulip,Ornamental,400,Partial Sun,Sandy Loam,Cool Temperate,180–240,Region-dependent / verify locally
+Tulip,Ornamental,500,Full Sun,Well-drained Loam,Cool Temperate,180–240,Region-dependent / verify locally
+Tulip,Ornamental,700,Partial Shade,Well-drained Loam,Cool and Dry,180–240,Region-dependent / verify locally
+Turmeric,Industrial,1200,Partial Shade,Loam,Tropical,210–300,Kharif/monsoon planting; region-dependent
+Turmeric,Industrial,900,Partial Sun,Rich Loam,Humid Tropical,210–300,Kharif/monsoon planting; region-dependent
+Turmeric,Food,1200,Partial Sun,Sandy Loam,Humid Tropical,210–300,Kharif/monsoon planting; region-dependent
+Turmeric,Food,1000,Partial Sun,Sandy Loam,Humid Tropical,210–300,Kharif/monsoon planting; region-dependent
+Turnip,Food,400,Full Sun,Sandy Loam,Cool,40–70,Rabi; region-dependent
+Turnip,Food,700,Full Sun,Loam,Cool Temperate,40–70,Rabi; region-dependent
+Turnip,Food,700,Full Sun,Sandy Loam,Cool and Moist,40–70,Rabi; region-dependent
+Vanilla,Industrial,700,Shade,Humus-rich Loam,Tropical Rainforest,"730–1,095 (2–3 years)",Perennial; region-dependent
+Vanilla,Industrial,1000,Shade,Rich Loam,Humid Tropical,"730–1,095 (2–3 years)",Perennial; region-dependent
+Velvet Bean,Feed,550,Full Sun,Loam,Humid Tropical,120–180,Region-dependent / verify locally
+Verbena,Ornamental,450,Full Sun,Sandy Loam,Subtropical,90–120,Region-dependent / verify locally
+Verbena,Ornamental,700,Full Sun,Sandy Loam,Warm and Dry,90–120,Region-dependent / verify locally
+Vetiver,Industrial,1000,Full Sun,Loam,Tropical and Semi-arid,365–540,Perennial; region-dependent
+Water Chestnut,Food,1500,Full Sun,Clayey Wet Soil,Warm and Moist,180–240,Region-dependent / verify locally
+Water Chestnut,Food,1300,Full Sun,Clay/Waterlogged,Tropical Wetland,180–240,Region-dependent / verify locally
+Watermelon,Food,400,Full Sun,Sandy Loam,Warm,70–100,Zaid; other seasons possible by region
+Wheat,Food,450,Full Sun,Loam,Temperate,110–140,Rabi
+White Clover,Feed,700,Full Sun,Moist Loam,Cool Temperate,60–90,Perennial; region-dependent
+Yam,Food,800,Partial Sun,Loam,Tropical,180–300,Multiple seasons — region-dependent
+Yam,Food,1100,Partial Sun,Sandy Loam,Humid Tropical,180–300,Multiple seasons — region-dependent
+Yam,Food,850,Full Sun,Loam,Warm and Humid,180–300,Multiple seasons — region-dependent
+Zinnia,Ornamental,350,Full Sun,Sandy Loam,Warm and Dry,60–90,Region-dependent / verify locally
+Zinnia,Ornamental,400,Full Sun,Well-drained Loam,Warm Temperate,60–90,Region-dependent / verify locally
+Zinnia,Ornamental,400,Full Sun,Sandy Loam,Warm and Dry,60–90,Region-dependent / verify locally
+Zinnia,Ornamental,550,Full Sun,Sandy Loam,Warm and Dry,60–90,Region-dependent / verify locally

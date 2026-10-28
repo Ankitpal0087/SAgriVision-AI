@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d6b4f" />
+    <title>Seed Information | SAgriVision AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="recommendation-page seed-information-page">
+    <header class="site-header">
+      <a class="brand-lockup brand-link" href="./index.html" aria-label="SAgriVision AI home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 38V16" /><path d="M24 27c-6.2 0-11.2-4.9-11.2-11.1C19 15.1 24 20 24 27Z" /><path d="M24 23c6.2 0 11.2-4.9 11.2-11.1C29 11.9 24 16.8 24 23Z" /><path d="M18.5 38h11" /></svg></span><span class="brand-name">SAgri<span>Vision AI</span></span></a>
+      <div class="language-switcher" aria-label="Language selection"><button type="button" data-language="en">English</button><span>/</span><button type="button" data-language="hi">हिंदी</button></div>
+    </header>
+
+    <main class="recommendation-shell seed-information-shell">
+      <button class="back-analysis-button" id="back-to-analysis" type="button">← Back to Analyse</button>
+      <section class="seed-information-intro">
+        <span class="form-kicker">Seed reference</span>
+        <h1 id="detail-title">Seed Information</h1>
+        <p id="detail-subtitle">Detailed information for the detected seed.</p>
+      </section>
+
+      <section class="seed-detail-hero detail-card" aria-labelledby="detail-title">
+        <div class="seed-detail-gallery" id="detail-gallery"></div>
+        <div class="seed-detail-overview">
+          <span class="result-label">Detected seed</span>
+          <h2 id="detail-name">Seed</h2>
+          <p id="detail-introduction"></p>
+          <div class="seed-detail-facts" id="detail-facts"></div>
+        </div>
+      </section>
+
+      <section class="seed-detail-sections" aria-label="Seed details">
+        <article class="detail-card"><span class="detail-card-kicker">Identification</span><h2>Identification features and appearance</h2><p id="detail-identification"></p></article>
+        <article class="detail-card"><span class="detail-card-kicker">Agriculture</span><h2>Common agricultural uses</h2><p id="detail-uses"></p></article>
+        <article class="detail-card"><span class="detail-card-kicker">Environment</span><h2>Suitable soil and climate</h2><p id="detail-environment"></p></article>
+        <article class="detail-card"><span class="detail-card-kicker">Timing</span><h2>Growing season and sowing</h2><p id="detail-season"></p></article>
+        <article class="detail-card"><span class="detail-card-kicker">Crop care</span><h2>Basic cultivation and crop care</h2><p id="detail-care"></p></article>
+        <article class="detail-card"><span class="detail-card-kicker">After maturity</span><h2>Harvesting information</h2><p id="detail-harvest"></p></article>
+        <article class="detail-card"><span class="detail-card-kicker">Seed handling</span><h2>Quality and storage guidance</h2><p id="detail-storage"></p></article>
+      </section>
+
+      <p class="seed-detail-empty" id="detail-empty" hidden>No seed result is available yet. Return to Seed Identification and analyse an image first.</p>
+    </main>
+    <footer class="form-footer recommendation-footer"><span data-i18n="footer"></span> <span aria-hidden="true">•</span> SAgriVision AI</footer>
+    <script src="./i18n.js"></script><script src="./seed-information.js"></script>
+  </body>
+</html>

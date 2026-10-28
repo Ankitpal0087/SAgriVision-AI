@@ -1,0 +1,8 @@
+.landing-team-title{margin:48px 0 20px;font:700 24px Manrope,sans-serif;letter-spacing:-.8px}.landing-team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:left}.landing-team-card{display:flex;flex-direction:column;gap:7px;padding:18px;border:1px solid var(--landing-line);border-radius:11px;background:#fff}.landing-team-initials{display:grid;place-items:center;width:36px;height:36px;margin-bottom:7px;border-radius:50%;background:var(--landing-soft);color:#4f8848;font:700 12px Manrope,sans-serif}.landing-team-card strong{font:700 13px Manrope,sans-serif}.landing-team-card>span:last-child{color:var(--landing-muted);font-size:11px;line-height:1.45}@media(max-width:900px){.landing-team-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.landing-team-grid{grid-template-columns:1fr}.landing-team-title{margin-top:38px}}
+
+/* Fixed landing-page navigation. The page-specific content offset prevents the
+   header from covering the hero, while anchor targets clear the same header. */
+.landing-refined{padding-top:76px}
+.landing-refined>.landing-nav{position:fixed;top:0;left:0;right:0;z-index:1000;width:100%;max-width:none;height:76px;margin:0;box-sizing:border-box;padding-left:max(24px,calc((100% - 1180px)/2 + 24px));padding-right:max(24px,calc((100% - 1180px)/2 + 24px));background:#fbfcf9;border-bottom:1px solid var(--landing-line);box-shadow:0 3px 14px rgba(23,56,43,.06)}
+.landing-refined .landing-section,.landing-refined .landing-how,.landing-refined .landing-about{scroll-margin-top:88px}
+@media(max-width:560px){.landing-refined{padding-top:68px}.landing-refined>.landing-nav{height:68px;padding-left:18px;padding-right:18px}}

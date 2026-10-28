@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d6b4f" />
+    <title>Create Account | SAgriVision AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="brand-panel" aria-label="About SAgriVision AI">
+        <div class="brand-lockup">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <path d="M24 38V16" />
+              <path d="M24 27c-6.2 0-11.2-4.9-11.2-11.1C19 15.1 24 20 24 27Z" />
+              <path d="M24 23c6.2 0 11.2-4.9 11.2-11.1C29 11.9 24 16.8 24 23Z" />
+              <path d="M18.5 38h11" />
+            </svg>
+          </div>
+          <span class="brand-name">SAgri<span>Vision AI</span></span>
+        </div>
+
+        <div class="panel-message">
+          <span class="eyebrow" data-i18n="brandEyebrow">Smarter farming, together</span>
+          <h2><span data-i18n="brandHeadlineOne">Grow with</span><br /><em data-i18n="brandHeadlineTwo">confidence.</em></h2>
+          <p data-i18n="brandDescription">Practical insights for every season, helping farmers make informed decisions from seed to harvest.</p>
+        </div>
+
+        <div class="field-art" aria-hidden="true">
+          <svg viewBox="0 0 600 260" preserveAspectRatio="none">
+            <path class="sun" d="M475 58a30 30 0 1 0 0-60 30 30 0 0 0 0 60Z" />
+            <path class="hill back" d="M0 195c80-32 125-18 190-38 90-28 115-28 198 2 78 27 125 15 212-23v124H0Z" />
+            <path class="hill front" d="M0 226c103-20 162-49 253-33 80 14 158 37 239 7 42-15 75-19 108-10v70H0Z" />
+            <path class="furrow" d="M-20 241c105-21 179-6 260 5 105 14 193-7 284-45 28-12 57-16 96-15" />
+            <path class="furrow light" d="M-10 257c103-20 170-7 256 2 106 11 181-8 267-41 35-13 59-16 87-16" />
+            <path class="sprout" d="M430 207v-48m0 27c-17 0-28-12-28-27 16-1 28 10 28 27Zm0-10c17 0 28-12 28-27-16-1-28 10-28 27Z" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="form-panel">
+        <div class="language-switcher" aria-label="Language selection"><button type="button" data-language="en">English</button><span>/</span><button type="button" data-language="hi">हिंदी</button></div>
+        <div class="form-wrap">
+          <div class="mobile-brand brand-lockup">
+            <div class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 38V16" /><path d="M24 27c-6.2 0-11.2-4.9-11.2-11.1C19 15.1 24 20 24 27Z" /><path d="M24 23c6.2 0 11.2-4.9 11.2-11.1C29 11.9 24 16.8 24 23Z" /><path d="M18.5 38h11" /></svg>
+            </div>
+            <span class="brand-name">SAgri<span>Vision AI</span></span>
+          </div>
+
+          <header class="form-header">
+            <span class="form-kicker" data-i18n="welcome">Welcome to SAgriVision AI</span>
+            <h1 data-i18n="createAccount">Create Account</h1>
+            <p data-i18n="registrationSubtitle">Join a community of farmers growing a better tomorrow.</p>
+          </header>
+
+          <form id="registration-form" novalidate>
+            <div class="field-group">
+              <label for="full-name" data-i18n="fullName">Full Name</label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5" /><path d="M5.5 19c.6-3.2 2.7-5 6.5-5s5.9 1.8 6.5 5" /></svg></span>
+                <input id="full-name" name="fullName" type="text" autocomplete="name" data-i18n-placeholder="fullNamePlaceholder" placeholder="Enter your full name" />
+              </div>
+              <span class="error-message" id="full-name-error" role="alert"></span>
+            </div>
+
+            <div class="field-group">
+              <label for="email" data-i18n="email">Email Address</label>
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2" /><path d="m4.5 7 7.5 5.5L19.5 7" /></svg></span>
+                <input id="email" name="email" type="email" autocomplete="email" data-i18n-placeholder="emailPlaceholder" placeholder="you@example.com" />
+              </div>
+              <span class="error-message" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="password" data-i18n="password">Password</label>
+                <div class="input-wrap">
+                  <span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7.5a4 4 0 0 1 8 0V10" /></svg></span>
+                  <input id="password" name="password" type="password" autocomplete="new-password" data-i18n-placeholder="passwordPlaceholder" placeholder="Create a password" />
+                  <button class="password-toggle" type="button" data-target="password" data-i18n-aria="showPassword" aria-label="Show password"><svg viewBox="0 0 24 24"><path d="M3.5 12s3.1-5 8.5-5 8.5 5 8.5 5-3.1 5-8.5 5-8.5-5-8.5-5Z" /><circle cx="12" cy="12" r="2" /></svg></button>
+                </div>
+                <span class="error-message" id="password-error" role="alert"></span>
+              </div>
+
+              <div class="field-group">
+                <label for="confirm-password" data-i18n="confirmPassword">Confirm Password</label>
+                <div class="input-wrap">
+                  <span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7.5a4 4 0 0 1 8 0V10" /></svg></span>
+                  <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" data-i18n-placeholder="confirmPasswordPlaceholder" placeholder="Repeat your password" />
+                  <button class="password-toggle" type="button" data-target="confirm-password" data-i18n-aria="showPassword" aria-label="Show password"><svg viewBox="0 0 24 24"><path d="M3.5 12s3.1-5 8.5-5 8.5 5 8.5 5-3.1 5-8.5 5-8.5-5-8.5-5Z" /><circle cx="12" cy="12" r="2" /></svg></button>
+                </div>
+                <span class="error-message" id="confirm-password-error" role="alert"></span>
+              </div>
+            </div>
+
+            <button class="submit-button" type="submit"><span data-i18n="createAccountButton">Create Account</span> <span aria-hidden="true">→</span></button>
+            <p class="login-prompt"><span data-i18n="alreadyHaveAccount">Already have an account?</span> <a href="./login.html" data-i18n="login">Login</a></p>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <section id="verification-panel" hidden aria-labelledby="verification-title">
+            <header class="form-header">
+              <span class="form-kicker" data-i18n="welcome">Welcome to SAgriVision AI</span>
+              <h1 id="verification-title" data-i18n="verifyEmailTitle">Verify Email</h1>
+              <p data-i18n="verifyEmailSubtitle">Enter the verification code sent to your email to finish creating your account.</p>
+              <p class="otp-destination" id="registration-otp-destination" hidden>
+                <span data-i18n="verificationCodeSentTo">Verification code sent to:</span>
+                <strong></strong>
+              </p>
+            </header>
+
+            <form id="verification-form" novalidate>
+              <div class="field-group">
+                <label for="verification-otp" data-i18n="verificationCode">Verification Code</label>
+                <div class="otp-verify-row">
+                  <input id="verification-otp" name="otp" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" data-i18n-placeholder="verificationCodePlaceholder" placeholder="Enter the 6-digit code" />
+                  <button class="otp-verify-button" id="verification-submit" type="submit"><span data-i18n="verifyOtp">Verify</span></button>
+                </div>
+                <span class="error-message" id="verification-otp-error" role="alert"></span>
+                <div class="resend-email-row"><button class="resend-email-button" id="registration-resend" type="button"><span data-i18n="registrationResendOtp">Resend OTP</span></button><span class="resend-email-status" id="registration-resend-status" role="status" aria-live="polite"></span></div>
+              </div>
+
+              <p class="form-status" id="verification-status" role="status" aria-live="polite"></p>
+              <p class="login-prompt"><a href="./login.html" data-i18n="backToLogin">Back to Login</a></p>
+            </form>
+          </section>
+        </div>
+        <footer class="form-footer"><span data-i18n="footer">Built for the people who grow our future</span> <span aria-hidden="true">•</span> SAgriVision AI</footer>
+      </section>
+    </main>
+    <script src="./i18n.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#1d6b4f" /><title>Forgot Password | SAgriVision AI</title><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" /><link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="simple-page"><div class="simple-card"><div class="language-switcher" aria-label="Language selection"><button type="button" data-language="en">English</button><span>/</span><button type="button" data-language="hi">हिंदी</button></div><div class="mobile-brand brand-lockup"><div class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 38V16" /><path d="M24 27c-6.2 0-11.2-4.9-11.2-11.1C19 15.1 24 20 24 27Z" /><path d="M24 23c6.2 0 11.2-4.9 11.2-11.1C29 11.9 24 16.8 24 23Z" /><path d="M18.5 38h11" /></svg></div><span class="brand-name">SAgri<span>Vision AI</span></span></div><div class="simple-icon" aria-hidden="true">?</div><span class="form-kicker" data-i18n="welcome"></span><h1 data-i18n="forgotTitle"></h1><p data-i18n="forgotSubtitle"></p>
+
+      <form id="reset-request-form" novalidate>
+        <div class="field-group">
+          <label for="reset-email" data-i18n="email"></label>
+          <div class="input-wrap"><span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="2" /><path d="m4.5 7 7.5 5.5L19.5 7" /></svg></span><input id="reset-email" type="email" autocomplete="email" data-i18n-placeholder="resetEmailPlaceholder" placeholder="Enter your email address" /></div>
+          <span class="error-message" id="reset-email-error" role="alert"></span>
+        </div>
+        <button class="submit-button" id="reset-request-submit" type="submit"><span data-i18n="sendResetCode">Send Reset Code</span> <span aria-hidden="true">→</span></button>
+        <p class="form-status" id="reset-request-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <section id="reset-form-panel" hidden>
+        <p class="otp-destination" id="reset-otp-destination" hidden>
+          <span data-i18n="resetCodeSentTo">Verification code sent to:</span>
+          <strong></strong>
+        </p>
+        <form id="reset-form" novalidate>
+          <div class="field-group">
+            <label for="reset-otp" data-i18n="resetOtp"></label>
+            <div class="otp-verify-row"><div class="input-wrap"><span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2" /><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01" /></svg></span><input id="reset-otp" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" data-i18n-placeholder="resetOtpPlaceholder" placeholder="Enter the 6-digit code" /></div><button class="otp-verify-button" id="reset-verify" type="button"><span data-i18n="verifyOtp">Verify</span></button></div>
+            <span class="error-message" id="reset-otp-error" role="alert"></span>
+            <div class="resend-email-row"><button class="resend-email-button" id="reset-resend" type="button"><span data-i18n="resendOtp">Resend OTP</span></button><span class="resend-email-status" id="reset-resend-status" role="status" aria-live="polite"></span></div>
+          </div>
+
+          <div class="field-group">
+            <label for="reset-password" data-i18n="newPassword"></label>
+            <div class="input-wrap"><span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7.5a4 4 0 0 1 8 0V10" /></svg></span><input id="reset-password" type="password" autocomplete="new-password" data-i18n-placeholder="newPasswordPlaceholder" placeholder="Create a new password" /><button class="password-toggle" type="button" data-target="reset-password" data-i18n-aria="showPassword" aria-label="Show password"><svg viewBox="0 0 24 24"><path d="M3.5 12s3.1-5 8.5-5 8.5 5 8.5 5-3.1 5-8.5 5-8.5-5-8.5-5Z" /><circle cx="12" cy="12" r="2" /></svg></button></div>
+            <span class="error-message" id="reset-password-error" role="alert"></span>
+          </div>
+
+          <div class="field-group">
+            <label for="reset-confirm-password" data-i18n="confirmNewPassword"></label>
+            <div class="input-wrap"><span class="input-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7.5a4 4 0 0 1 8 0V10" /></svg></span><input id="reset-confirm-password" type="password" autocomplete="new-password" data-i18n-placeholder="confirmNewPasswordPlaceholder" placeholder="Repeat your new password" /><button class="password-toggle" type="button" data-target="reset-confirm-password" data-i18n-aria="showPassword" aria-label="Show password"><svg viewBox="0 0 24 24"><path d="M3.5 12s3.1-5 8.5-5 8.5 5 8.5 5-3.1 5-8.5 5-8.5-5-8.5-5Z" /><circle cx="12" cy="12" r="2" /></svg></button></div>
+            <span class="error-message" id="reset-confirm-password-error" role="alert"></span>
+          </div>
+
+          <button class="submit-button" id="reset-submit" type="submit" disabled><span data-i18n="resetPasswordButton">Reset Password</span> <span aria-hidden="true">→</span></button>
+          <p class="form-status" id="reset-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <p class="login-prompt"><span data-i18n="rememberPassword">Remember your password?</span> <a href="./login.html" data-i18n="backToLogin">Back to Login</a></p>
+      <nav class="page-navigation" data-page-navigation data-page="forgot" aria-label="Page navigation"><div class="page-navigation-row"><button class="navigation-button" type="button" data-nav-back>← <span>Back</span></button><button class="navigation-button" type="button" data-nav-next><span>Next</span> →</button></div><span class="navigation-status" data-nav-status role="status" aria-live="polite"></span></nav>
+    </div></main><script src="./i18n.js"></script><script src="./forgot.js"></script><script src="./page-navigation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d6b4f" />
+    <title>Supported Seeds | SAgriVision AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./public.css" />
+    <link rel="stylesheet" href="./supported-seeds.css" />
+  </head>
+  <body class="recommendation-page supported-seeds-page">
+    <header class="public-nav">
+      <div class="nav-inner">
+        <a class="brand" href="./home.html" aria-label="SAgriVision AI Home"><span class="brand-mark" aria-hidden="true">⌁</span><span>SAgriVision AI</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="public-links">Menu</button>
+        <nav class="nav-links" id="public-links" aria-label="Public navigation"><a class="nav-link" href="./home.html">Home</a><a class="nav-link" href="./learning.html">Learning</a><a class="nav-link" href="./features.html">Features</a><a class="nav-link" href="./about.html">About</a><a class="nav-link nav-login" href="./login.html">Login</a></nav>
+        <div class="language-switcher" aria-label="Language selection"><button type="button" data-language="en">English</button><span>/</span><button type="button" data-language="hi">हिंदी</button></div>
+      </div>
+    </header>
+
+    <main class="recommendation-shell supported-seeds-shell">
+      <a class="supported-seeds-back" href="./dashboard.html">← Back to Dashboard</a>
+      <section class="supported-seeds-intro" aria-labelledby="supported-seeds-title">
+        <span class="form-kicker">Seed library</span>
+        <h1 id="supported-seeds-title">24 Supported Seeds</h1>
+        <p>Explore the seed types supported by SAgriVision AI.</p>
+      </section>
+      <div class="supported-seeds-identify"><a class="submit-button supported-seeds-start" href="./seed-analysis.htm">Identify Your Seed Type <span aria-hidden="true">→</span></a></div>
+      <section class="supported-seeds-tools" aria-label="Seed explorer controls">
+        <label class="supported-seeds-search"><span>Search seeds</span><input id="seed-search" type="search" placeholder="Type a seed name" autocomplete="off" /></label>
+        <label class="supported-seeds-sort"><span>Sort</span><select id="seed-sort"><option value="default">Project order</option><option value="az">A–Z</option></select></label>
+        <p class="supported-seeds-count" id="seed-count" role="status" aria-live="polite"></p>
+      </section>
+      <section class="supported-seeds-grid" id="supported-seeds-grid" aria-label="24 supported seed types"></section>
+      <div class="supported-seeds-more"><button class="submit-button supported-seeds-more-button" id="seed-more" type="button" aria-expanded="false">Know More <span aria-hidden="true">→</span></button></div>
+      <p class="supported-seeds-empty" id="supported-seeds-empty" hidden>No supported seeds match your search.</p>
+      <aside class="supported-seed-detail" id="supported-seed-detail" hidden aria-labelledby="supported-seed-detail-name">
+        <div><span class="form-kicker">Selected seed</span><h2 id="supported-seed-detail-name"></h2><p>Reference image from the supported seed library.</p></div>
+        <button class="supported-seed-detail-close" id="supported-seed-detail-close" type="button" aria-label="Close seed details">×</button>
+      </aside>
+      <div class="supported-seeds-cta"><a class="submit-button supported-seeds-start" href="./seed-analysis.htm">Identify Your Seed Type <span aria-hidden="true">→</span></a></div>
+    </main>
+
+    <footer class="form-footer recommendation-footer"><span data-i18n="footer"></span> <span aria-hidden="true">•</span> SAgriVision AI</footer>
+    <script src="./i18n.js"></script><script src="./supported-seeds.js"></script><script src="./public.js"></script>
+  </body>
+</html>
