@@ -45,6 +45,7 @@ temp/
 # Build and test output
 dist/
 **/dist/
+frontend/cropgpt-dist/
 build/
 **/build/
 coverage/

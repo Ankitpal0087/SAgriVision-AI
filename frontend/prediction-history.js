@@ -49,14 +49,14 @@ if (!token) {
     const item = document.createElement('span'); const key = document.createElement('b'); key.textContent = `${label}:`; item.append(key, ` ${value}`); meta.append(item);
   }
 
-  function renderInactiveModule() {
+  function renderCropGptHistory() {
     const labels = { cropgpt: 'CropGPT / Chatbot' };
-    historySectionTitle.textContent = labels[activeModule]; historyCount.textContent = 'Inactive module';
-    historyList.innerHTML = `<div class="history-coming-soon"><strong>Coming Soon</strong><p>No records yet for ${labels[activeModule]}.</p></div>`;
+    historySectionTitle.textContent = `${labels[activeModule]} activity`; historyCount.textContent = '0 records';
+    historyList.innerHTML = `<div class="history-coming-soon"><strong>${labels[activeModule]}</strong><p>No records yet for ${labels[activeModule]}.</p><a class="history-module-link" href="./cropgpt/">Open CropGPT / Chatbot →</a></div>`;
   }
 
   function renderHistory() {
-    if (activeModule === 'cropgpt') { renderInactiveModule(); return; }
+    if (activeModule === 'cropgpt') { renderCropGptHistory(); return; }
     historySectionTitle.textContent = activeModule === 'seed' ? 'Seed Detection activity' : activeModule === 'crop' ? 'Crop Recommendation activity' : activeModule === 'disease' ? 'Disease Detection activity' : 'All activity';
     const records = recordsForActiveModule();
     historyCount.textContent = `${records.length} record${records.length === 1 ? '' : 's'}`;

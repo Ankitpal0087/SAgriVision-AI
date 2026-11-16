@@ -7,6 +7,7 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.PORT || 4173);
 const contentTypes = { '.html': 'text/html; charset=utf-8', '.htm': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp' };
 const cropRecommendationRoot = path.join(root, 'crop-recommendation');
+const cropGptRoot = path.join(root, 'cropgpt-dist');
 
 function safePath(requestUrl) {
   const requested = decodeURIComponent(new URL(requestUrl, `http://localhost:${port}`).pathname);
@@ -16,6 +17,13 @@ function safePath(requestUrl) {
     const cropResolved = path.resolve(cropRecommendationRoot, cropRelative);
     if (!cropResolved.startsWith(`${cropRecommendationRoot}${path.sep}`)) return null;
     return path.extname(cropResolved) ? cropResolved : path.join(cropRecommendationRoot, 'index.html');
+  }
+  if (requested === '/cropgpt' || requested === '/cropgpt/') return path.join(cropGptRoot, 'index.html');
+  if (requested.startsWith('/cropgpt/')) {
+    const cropGptRelative = requested.slice('/cropgpt/'.length);
+    const cropGptResolved = path.resolve(cropGptRoot, cropGptRelative);
+    if (!cropGptResolved.startsWith(`${cropGptRoot}${path.sep}`)) return null;
+    return path.extname(cropGptResolved) ? cropGptResolved : path.join(cropGptRoot, 'index.html');
   }
   const relative = requested === '/' ? 'home.html' : requested.replace(/^\/+/, '');
   const resolved = path.resolve(root, relative);

@@ -1,0 +1,15 @@
+# Python 3.11 ya usse naya chahiye (3.12 best). Model scikit-learn 1.8.0 se bana hai, isliye versions pinned hain.
+# Core
+Flask>=3.0,<4
+pandas==3.0.2
+numpy==2.4.4
+scikit-learn==1.8.0
+scipy==1.17.1
+joblib==1.5.3
+# Config
+python-dotenv>=1.0
+# Training report charts
+matplotlib>=3.8
+# Production server (optional; Linux/macOS/WSL)
+gunicorn>=21.2; platform_system != "Windows"
+waitress>=3.0; platform_system == "Windows"

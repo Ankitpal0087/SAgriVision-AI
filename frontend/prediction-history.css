@@ -41,4 +41,6 @@ h1,h2,p { margin-top:0; }
 .history-coming-soon { display:grid; place-items:center; min-height:220px; padding:30px; text-align:center; }
 .history-coming-soon strong { color:var(--history-green); font:700 16px/1.2 Manrope,sans-serif; }
 .history-coming-soon p { margin:8px 0 0; color:#99a49d; font-size:12px; }
+.history-module-link { display:inline-block; margin-top:18px; padding:10px 16px; border-radius:9px; color:#fff; background:var(--history-green); font-size:12px; font-weight:700; text-decoration:none; }
+.history-module-link:hover { background:#18563a; }
 @media (max-width:560px) { .history-header { align-items:flex-start; flex-direction:column; } .history-header-actions { justify-content:space-between; width:100%; gap:12px; } .history-user { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } .history-content { padding-top:32px; } .history-record { grid-template-columns:auto 1fr; padding:15px 16px; } .history-record time { grid-column:2; } .history-card-heading { padding:19px 16px 15px; } }

@@ -48,7 +48,11 @@ if (!token) {
 
   function navigate(action) {
     if (action === 'seed') window.location.assign('./seed-analysis.htm');
+    if (action === 'crop-recommendation') window.location.assign('./crop-recommendation');
     if (action === 'history') window.location.assign('./prediction-history.html');
+    if (action === 'cropgpt') window.location.assign('./cropgpt/');
+    if (action === 'yield-prediction') window.location.assign('./yield-prediction.html');
+    if (action === 'disease-detection') window.location.assign('./disease-detection.html');
   }
 
   document.querySelectorAll('[data-action]').forEach((button) => button.addEventListener('click', () => navigate(button.dataset.action)));

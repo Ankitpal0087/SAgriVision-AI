@@ -5,8 +5,9 @@ import { getDb, id } from './database/db.js';
 import { predictSeedType, detectDisease } from './models/modelAdapters.js';
 import { warmSeedModel } from './services/seedTypeInference.js';
 import { buildDiseaseAssistantContext, handoffToChatbot } from './services/diseaseIntegration.js';
+import { analyzeDisease, diseaseWiki } from './services/diseaseDetectionProxy.js';
 const port = process.env.PORT || 3000, sessions = new Map(), frontendOrigin = process.env.FRONTEND_ORIGIN || 'http://localhost:5173';
-const json = (res, status, body) => { res.writeHead(status, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': frontendOrigin, 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Methods': 'GET,POST,OPTIONS' }); res.end(JSON.stringify(body)); };
+const json = (res, status, body) => { res.writeHead(status, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': frontendOrigin, 'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With', 'Access-Control-Allow-Methods': 'GET,POST,OPTIONS' }); res.end(JSON.stringify(body)); };
 const read = req => new Promise((resolve, reject) => { let s = ''; req.on('data', c => s += c); req.on('end', () => { try { resolve(s ? JSON.parse(s) : {}); } catch (e) { reject(e); } }); });
 const hash = (password, salt = crypto.randomBytes(16).toString('hex')) => `${salt}:${crypto.scryptSync(password, salt, 64).toString('hex')}`;
 const valid = (stored, password) => { const [salt, key] = stored.split(':'); return crypto.timingSafeEqual(Buffer.from(key, 'hex'), crypto.scryptSync(password, salt, 64)); };
@@ -18,11 +19,71 @@ const tokenHash = token => crypto.createHash('sha256').update(token).digest('hex
 const session = userId => { const token = crypto.randomBytes(24).toString('hex'); sessions.set(token, userId); return token; };
 async function auth(req, db) { const userId = sessions.get(req.headers.authorization?.replace('Bearer ', '')); return userId ? db.collection('users').findOne({ id: userId }) : null; }
 const mlApiUrl = (process.env.ML_API_URL || 'http://127.0.0.1:8001').replace(/\/$/, '');
+const cropGptApiUrl = (process.env.CROPGPT_API_URL || 'http://127.0.0.1:8002').replace(/\/$/, '');
+const cropGptTimeoutMs = Math.max(1000, Number(process.env.CROPGPT_TIMEOUT_MS || 30000));
+const cropAdvisorApiUrl = (process.env.CROP_ADVISOR_API_URL || 'http://127.0.0.1:5000').replace(/\/$/, '');
+const cropAdvisorApiKey = process.env.CROP_ADVISOR_API_KEY || '';
+const cropAdvisorTimeoutMs = Math.max(1000, Number(process.env.CROP_ADVISOR_TIMEOUT_MS || 30000));
 const forwardMlJson = async (res, path, payload) => {
   const response = await fetch(`${mlApiUrl}${path}`, { method: 'POST', headers: { Accept: 'application/json', 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
   const body = await response.text();
-  res.writeHead(response.status, { 'Content-Type': response.headers.get('content-type') || 'application/json', 'Access-Control-Allow-Origin': frontendOrigin, 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Allow-Methods': 'GET,POST,OPTIONS' });
+  res.writeHead(response.status, { 'Content-Type': response.headers.get('content-type') || 'application/json', 'Access-Control-Allow-Origin': frontendOrigin, 'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With', 'Access-Control-Allow-Methods': 'GET,POST,OPTIONS' });
   res.end(body);
+};
+const forwardCropGpt = async (res, path, payload, responseType = 'json') => {
+  let response;
+  try {
+    response = await fetch(`${cropGptApiUrl}${path}`, {
+      method: 'POST',
+      headers: { Accept: responseType === 'pdf' ? 'application/pdf' : 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(cropGptTimeoutMs),
+    });
+  } catch (error) {
+    const message = error.name === 'TimeoutError' || error.name === 'AbortError'
+      ? 'CropGPT timed out while preparing a response.'
+      : 'CropGPT is currently unavailable.';
+    return json(res, 503, { error: message, service: 'cropgpt' });
+  }
+
+  const headers = {
+    'Content-Type': response.headers.get('content-type') || (responseType === 'pdf' ? 'application/pdf' : 'application/json'),
+    'Access-Control-Allow-Origin': frontendOrigin,
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
+    'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+  };
+  if (responseType === 'pdf') {
+    const body = Buffer.from(await response.arrayBuffer());
+    res.writeHead(response.status, { ...headers, 'Content-Disposition': response.headers.get('content-disposition') || 'attachment; filename=cropgpt-report.pdf' });
+    return res.end(body);
+  }
+  const body = await response.text();
+  res.writeHead(response.status, headers);
+  return res.end(body);
+};
+const forwardCropAdvisor = async (req, res, url) => {
+  const suffix = url.pathname.slice('/api/yield-prediction'.length) || '/';
+  const targetPath = `/api${suffix}`;
+  const allowed = /^\/api\/(meta|model-info|predict|compare|history|soils|resources|fertilizer|crop(?:\/[^/]+)?)$/.test(targetPath);
+  if (!allowed || !['GET', 'POST'].includes(req.method)) return json(res, 404, { error: 'Yield Prediction route not found.' });
+  const headers = { Accept: req.headers.accept || 'application/json' };
+  let body;
+  if (req.method === 'POST') {
+    body = await read(req);
+    headers['Content-Type'] = 'application/json';
+    headers['X-Requested-With'] = 'CropAdvisor';
+  }
+  if (cropAdvisorApiKey) headers['X-API-Key'] = cropAdvisorApiKey;
+  let response;
+  try {
+    response = await fetch(`${cropAdvisorApiUrl}${targetPath}${url.search}`, { method: req.method, headers, body: req.method === 'POST' ? JSON.stringify(body) : undefined, signal: AbortSignal.timeout(cropAdvisorTimeoutMs) });
+  } catch (error) {
+    const message = error.name === 'TimeoutError' || error.name === 'AbortError' ? 'Yield Prediction service timed out.' : 'Yield Prediction service is currently unavailable.';
+    return json(res, 503, { error: message, service: 'crop-advisor' });
+  }
+  const responseBody = await response.text();
+  res.writeHead(response.status, { 'Content-Type': response.headers.get('content-type') || 'application/json', 'Access-Control-Allow-Origin': frontendOrigin, 'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With', 'Access-Control-Allow-Methods': 'GET,POST,OPTIONS' });
+  return res.end(responseBody);
 };
 const predictionDate = record => record.createdAt || record.updatedAt || null;
 const sortPredictions = records => records.filter(record => predictionDate(record)).sort((a, b) => new Date(predictionDate(b)) - new Date(predictionDate(a)));
@@ -38,6 +99,41 @@ async function api(req, res) {
   if (route === '/api/auth/email/verify' && req.method === 'POST') { const b = await read(req), challenge = await db.collection('otpChallenges').findOne({ id: b.challengeId }); if (!challenge || new Date(challenge.expiresAt).getTime() <= Date.now()) return json(res, 410, { error: 'OTP expired.' }); if (!b.otp || !valid(challenge.codeHash, b.otp)) return json(res, 401, { error: 'Invalid OTP.' }); await db.collection('otpChallenges').deleteOne({ id: challenge.id }); const user = { id: id('usr'), name: challenge.name, email: challenge.email, passwordHash: challenge.passwordHash, emailVerified: true, verifiedContacts: [{ type: 'email', value: challenge.email, verifiedAt: new Date().toISOString() }], createdAt: new Date().toISOString() }; await db.collection('users').insertOne(user); return json(res, 200, { user: { id: user.id, name: user.name, email: user.email }, token: session(user.id) }); }
   if (url.pathname === '/api/auth/email/login' && req.method === 'POST') { const b = await read(req), email = String(b.email || '').trim().toLowerCase(), user = await db.collection('users').findOne({ email }); if (!user || !user.emailVerified) return json(res, 401, { error: 'Email is not registered.', code: 'WRONG_EMAIL' }); if (!valid(user.passwordHash, b.password)) return json(res, 401, { error: 'Invalid password.', code: 'WRONG_PASSWORD' }); await db.collection('users').updateOne({ id: user.id }, { $set: { lastLoginAt: new Date().toISOString() } }); return json(res, 200, { user: { id: user.id, name: user.name, email: user.email }, token: session(user.id) }); }
   const user = await auth(req, db); if (!user) return json(res, 401, { error: 'Please log in.' });
+  if (route.startsWith('/api/yield-prediction')) return forwardCropAdvisor(req, res, url);
+  if (route === '/api/cropgpt/chat' && req.method === 'POST') {
+    const body = await read(req);
+    return forwardCropGpt(res, '/api/chat', body);
+  }
+  if (route === '/api/cropgpt/reports/pdf' && req.method === 'POST') {
+    const body = await read(req);
+    return forwardCropGpt(res, '/api/reports/pdf', body, 'pdf');
+  }
+  if (route === '/api/disease-detection/analyze' && req.method === 'POST') {
+    const b = await read(req);
+    try {
+      const upstream = await analyzeDisease({ image: b.image, filename: b.filename });
+      const analysisId = id('disease');
+      if (upstream.status >= 400) return json(res, upstream.status, upstream.body);
+      const result = { ...upstream.body, analysisId };
+      const assistantContext = buildDiseaseAssistantContext({ crop: result.crop, diseaseResult: result, language: b.language || 'en' });
+      const chatbotHandoff = await handoffToChatbot(assistantContext);
+      const disease = { id: analysisId, userId: user.id, predictionType: 'disease', crop: result.crop || null, imageName: b.filename || null, result, assistantContext, chatbotHandoff, createdAt: new Date().toISOString() };
+      await db.collection('diseases').insertOne(disease);
+      return json(res, 201, result);
+    } catch (error) {
+      return json(res, error.status || 422, { error: error.message });
+    }
+  }
+  if (route === '/api/disease-detection/wiki/crop' && req.method === 'GET') {
+    const crop = String(url.searchParams.get('crop') || '');
+    if (!/^[A-Za-z]+$/.test(crop)) return json(res, 400, { available: false, message: 'Invalid crop.' });
+    try { const upstream = await diseaseWiki(`/api/wiki/crop?crop=${encodeURIComponent(crop)}`); return json(res, upstream.status, upstream.body); } catch (error) { return json(res, error.status || 503, { available: false, message: error.message }); }
+  }
+  if (route === '/api/disease-detection/wiki/disease' && req.method === 'GET') {
+    const crop = String(url.searchParams.get('crop') || ''), disease = String(url.searchParams.get('disease') || '');
+    if (!/^[A-Za-z]+$/.test(crop) || !/^[\w /-]+$/.test(disease)) return json(res, 400, { available: false, message: 'Invalid disease lookup.' });
+    try { const upstream = await diseaseWiki(`/api/wiki/disease?crop=${encodeURIComponent(crop)}&disease=${encodeURIComponent(disease)}`); return json(res, upstream.status, upstream.body); } catch (error) { return json(res, error.status || 503, { available: false, message: error.message }); }
+  }
   if (route === '/api/dashboard' && req.method === 'GET') {
     const [analyses, diseases] = await Promise.all([
       db.collection('analyses').find({ userId: user.id }).sort({ createdAt: -1 }).toArray(),

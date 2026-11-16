@@ -1,0 +1,552 @@
+{
+  "dataset": {
+    "file": "crop_yield.csv",
+    "rows_raw": 19689,
+    "rows_after_cleaning": 19477,
+    "years": [
+      1997,
+      2020
+    ],
+    "n_crops": 55,
+    "n_states": 30,
+    "cleaning": {
+      "rows_in": 19689,
+      "missing_values_by_column": {},
+      "dropped_missing_target_or_keys": 0,
+      "dropped_exact_duplicates": 0,
+      "dropped_non_positive_area": 0,
+      "dropped_zero_yield_rows": 112,
+      "dropped_outliers_per_crop_mad": 100,
+      "outlier_rule": "|log1p(yield) - crop median| / (1.4826*MAD) > 6.0",
+      "rows_out": 19477
+    }
+  },
+  "split": {
+    "train": "<= 2014",
+    "validation": "2015-2016",
+    "test": "> 2016",
+    "n_train": 14258,
+    "n_val": 2017,
+    "n_test": 3202
+  },
+  "selected_model": "Random Forest",
+  "selection_rule": "lowest validation RMSE_log (test set not used for selection)",
+  "baselines": {
+    "validation": {
+      "Global mean (log)": {
+        "n": 2017,
+        "MAE_log": 0.6856490082522038,
+        "RMSE_log": 1.1196844767287981,
+        "R2_log": -0.002701510479878877,
+        "R2_within_crop": -7.36154831307277,
+        "MAE": 80.20410583611812,
+        "RMSE": 894.6240571419675,
+        "R2": -0.007824031671978648,
+        "MAE_excl_coconut": 3.8405764414995653,
+        "RMSE_excl_coconut": 11.419501475871078,
+        "R2_excl_coconut": -0.04826544646570907,
+        "median_APE_pct": 89.11143382289637,
+        "within_25pct_share": 0.13634110064452157
+      },
+      "Crop median": {
+        "n": 2017,
+        "MAE_log": 0.2748055096687899,
+        "RMSE_log": 0.4189691475060611,
+        "R2_log": 0.8596073276060676,
+        "R2_within_crop": -0.17073735379280608,
+        "MAE": 22.966592918975618,
+        "RMSE": 273.6224771308404,
+        "R2": 0.9057227066888419,
+        "MAE_excl_coconut": 2.030874897068678,
+        "RMSE_excl_coconut": 6.228755650009943,
+        "R2_excl_coconut": 0.6881257138917236,
+        "median_APE_pct": 34.25925925925922,
+        "within_25pct_share": 0.3634110064452157
+      },
+      "Crop+State+Season historical mean": {
+        "n": 2017,
+        "MAE_log": 0.15301432143970353,
+        "RMSE_log": 0.25767220161786086,
+        "R2_log": 0.946897435983906,
+        "R2_within_crop": 0.5571766373862261,
+        "MAE": 9.538726911447949,
+        "RMSE": 132.62126760603,
+        "R2": 0.9778522346226576,
+        "MAE_excl_coconut": 0.994878837077444,
+        "RMSE_excl_coconut": 3.002521134845122,
+        "R2_excl_coconut": 0.9275315242445892,
+        "median_APE_pct": 17.50903292546554,
+        "within_25pct_share": 0.6489836390679227
+      }
+    },
+    "test": {
+      "Global mean (log)": {
+        "n": 3202,
+        "MAE_log": 0.673061851419608,
+        "RMSE_log": 1.1114204999991428,
+        "R2_log": -0.005769771891265707,
+        "R2_within_crop": -6.754810256267805,
+        "MAE": 74.40553107345771,
+        "RMSE": 853.9725863966386,
+        "R2": -0.007381081096058395,
+        "MAE_excl_coconut": 4.184009586279797,
+        "RMSE_excl_coconut": 14.772303869338929,
+        "R2_excl_coconut": -0.03913726049897526,
+        "median_APE_pct": 87.59728420516495,
+        "within_25pct_share": 0.14334790755777638
+      },
+      "Crop median": {
+        "n": 3202,
+        "MAE_log": 0.2940707730090237,
+        "RMSE_log": 0.4428705167803824,
+        "R2_log": 0.840303532078246,
+        "R2_within_crop": -0.2313114213013414,
+        "MAE": 20.472520831299963,
+        "RMSE": 276.644555614774,
+        "R2": 0.8942816961237677,
+        "MAE_excl_coconut": 2.4270745332135877,
+        "RMSE_excl_coconut": 10.643539450504091,
+        "R2_excl_coconut": 0.46055322521447684,
+        "median_APE_pct": 35.68357142379941,
+        "within_25pct_share": 0.34415990006246094
+      },
+      "Crop+State+Season historical mean": {
+        "n": 3202,
+        "MAE_log": 0.18285247867123083,
+        "RMSE_log": 0.29748539451832173,
+        "R2_log": 0.9279435155875975,
+        "R2_within_crop": 0.444421198599802,
+        "MAE": 13.65324615243902,
+        "RMSE": 195.9460872290423,
+        "R2": 0.9469629789755587,
+        "MAE_excl_coconut": 1.3893453600212695,
+        "RMSE_excl_coconut": 8.787269301008847,
+        "R2_excl_coconut": 0.6323078779105393,
+        "median_APE_pct": 22.2064355413725,
+        "within_25pct_share": 0.5624609618988132
+      }
+    }
+  },
+  "comparison": {
+    "Ridge (linear baseline)": {
+      "validation": {
+        "n": 2017,
+        "MAE_log": 0.1451539884900848,
+        "RMSE_log": 0.2327955935568444,
+        "R2_log": 0.9566559123527919,
+        "R2_within_crop": 0.6385527705301448,
+        "MAE": 12.858968193359967,
+        "RMSE": 151.3210825603834,
+        "R2": 0.9711661626618002,
+        "MAE_excl_coconut": 0.9007252279608582,
+        "RMSE_excl_coconut": 2.5847539344569834,
+        "R2_excl_coconut": 0.9462949171678782,
+        "median_APE_pct": 18.503350193294306,
+        "within_25pct_share": 0.631631135349529
+      },
+      "test": {
+        "n": 3202,
+        "MAE_log": 0.15353707787199822,
+        "RMSE_log": 0.25765122056245077,
+        "R2_log": 0.945948695338894,
+        "R2_within_crop": 0.5832469582353725,
+        "MAE": 18.82133020319642,
+        "RMSE": 232.80679891189664,
+        "R2": 0.9251318244363294,
+        "MAE_excl_coconut": 1.2151612055239158,
+        "RMSE_excl_coconut": 8.526233393067981,
+        "R2_excl_coconut": 0.6538288380973891,
+        "median_APE_pct": 17.744132870639266,
+        "within_25pct_share": 0.6199250468457215
+      },
+      "fit_seconds": 0.8
+    },
+    "Random Forest": {
+      "validation": {
+        "n": 2017,
+        "MAE_log": 0.12208608937673411,
+        "RMSE_log": 0.22220284327979734,
+        "R2_log": 0.9605106869943856,
+        "R2_within_crop": 0.6706978147579803,
+        "MAE": 6.634458604654681,
+        "RMSE": 81.25196984694878,
+        "R2": 0.9916867400220458,
+        "MAE_excl_coconut": 0.8460778172914851,
+        "RMSE_excl_coconut": 2.7253204063098733,
+        "R2_excl_coconut": 0.940294805594859,
+        "median_APE_pct": 12.15479794610321,
+        "within_25pct_share": 0.7169062964799207
+      },
+      "test": {
+        "n": 3202,
+        "MAE_log": 0.14167179353782314,
+        "RMSE_log": 0.25503143783442495,
+        "R2_log": 0.9470422882212721,
+        "R2_within_crop": 0.5916789130797705,
+        "MAE": 11.754934228559074,
+        "RMSE": 154.95145033926272,
+        "R2": 0.9668336848945037,
+        "MAE_excl_coconut": 1.2130402378895384,
+        "RMSE_excl_coconut": 8.610271109560667,
+        "R2_excl_coconut": 0.6469712256929514,
+        "median_APE_pct": 14.277630585208373,
+        "within_25pct_share": 0.6845721424109932
+      },
+      "fit_seconds": 5.5
+    },
+    "Extra Trees": {
+      "validation": {
+        "n": 2017,
+        "MAE_log": 0.12108211331641452,
+        "RMSE_log": 0.22472458585692617,
+        "R2_log": 0.9596092858290562,
+        "R2_within_crop": 0.6631810120858135,
+        "MAE": 5.887511098322829,
+        "RMSE": 76.89708542861413,
+        "R2": 0.9925539949971081,
+        "MAE_excl_coconut": 0.8837254187332415,
+        "RMSE_excl_coconut": 3.0185569953745177,
+        "R2_excl_coconut": 0.9267553780836623,
+        "median_APE_pct": 11.681847396616533,
+        "within_25pct_share": 0.7188894397620228
+      },
+      "test": {
+        "n": 3202,
+        "MAE_log": 0.14104155823980888,
+        "RMSE_log": 0.2578403305663479,
+        "R2_log": 0.9458693214190911,
+        "R2_within_crop": 0.5826349596402962,
+        "MAE": 10.769866295164375,
+        "RMSE": 140.07385296087432,
+        "R2": 0.9728968305080773,
+        "MAE_excl_coconut": 1.2515853437942188,
+        "RMSE_excl_coconut": 8.699333733762773,
+        "R2_excl_coconut": 0.6396301602885253,
+        "median_APE_pct": 14.302973728921382,
+        "within_25pct_share": 0.6883198001249219
+      },
+      "fit_seconds": 3.6
+    },
+    "Gradient Boosting": {
+      "validation": {
+        "n": 2017,
+        "MAE_log": 0.12298123614268414,
+        "RMSE_log": 0.2241403104452123,
+        "R2_log": 0.9598190414498504,
+        "R2_within_crop": 0.6649301684786961,
+        "MAE": 7.109540410257592,
+        "RMSE": 84.878336658875,
+        "R2": 0.9909281202410986,
+        "MAE_excl_coconut": 0.9139027674465441,
+        "RMSE_excl_coconut": 3.1038709580161243,
+        "R2_excl_coconut": 0.9225566207225876,
+        "median_APE_pct": 12.478818396261202,
+        "within_25pct_share": 0.7188894397620228
+      },
+      "test": {
+        "n": 3202,
+        "MAE_log": 0.14084753344187123,
+        "RMSE_log": 0.25313294721363183,
+        "R2_log": 0.9478278031672942,
+        "R2_within_crop": 0.5977354873874363,
+        "MAE": 12.153591530176504,
+        "RMSE": 170.71973329625354,
+        "R2": 0.9597400363319365,
+        "MAE_excl_coconut": 1.2379935710443053,
+        "RMSE_excl_coconut": 8.577171309216434,
+        "R2_excl_coconut": 0.649680251129112,
+        "median_APE_pct": 14.61920312251142,
+        "within_25pct_share": 0.683947532792005
+      },
+      "fit_seconds": 14.4
+    },
+    "HistGradientBoosting": {
+      "validation": {
+        "n": 2017,
+        "MAE_log": 0.1270174774751788,
+        "RMSE_log": 0.22607897199408844,
+        "R2_log": 0.9591209594450625,
+        "R2_within_crop": 0.6591088484263031,
+        "MAE": 11.361282011653044,
+        "RMSE": 142.2618407913154,
+        "R2": 0.9745152479358608,
+        "MAE_excl_coconut": 0.9314578489763977,
+        "RMSE_excl_coconut": 3.032843154478064,
+        "R2_excl_coconut": 0.9260604364436976,
+        "median_APE_pct": 13.288720472950692,
+        "within_25pct_share": 0.7079821517104611
+      },
+      "test": {
+        "n": 3202,
+        "MAE_log": 0.14179754961280489,
+        "RMSE_log": 0.25411540538172867,
+        "R2_log": 0.947422036389933,
+        "R2_within_crop": 0.5946068942892204,
+        "MAE": 16.40338194202415,
+        "RMSE": 205.11147370573914,
+        "R2": 0.9418853212542443,
+        "MAE_excl_coconut": 1.2401662173387693,
+        "RMSE_excl_coconut": 8.634026821532519,
+        "R2_excl_coconut": 0.6450205277722256,
+        "median_APE_pct": 14.95132040908701,
+        "within_25pct_share": 0.6873828856964397
+      },
+      "fit_seconds": 3.4
+    }
+  },
+  "rolling_origin": {
+    "Ridge (linear baseline)": {
+      "RMSE_log_mean": 0.22978606307692173,
+      "RMSE_log_std": 0.015340339198513223,
+      "R2_within_crop_mean": 0.6383968961699017,
+      "origins": [
+        2008,
+        2011,
+        2014
+      ]
+    },
+    "Random Forest": {
+      "RMSE_log_mean": 0.22317343667814782,
+      "RMSE_log_std": 0.02261572134623414,
+      "R2_within_crop_mean": 0.6571797921632029,
+      "origins": [
+        2008,
+        2011,
+        2014
+      ]
+    },
+    "Extra Trees": {
+      "RMSE_log_mean": 0.21956537406799806,
+      "RMSE_log_std": 0.021617460444596365,
+      "R2_within_crop_mean": 0.6685280536378478,
+      "origins": [
+        2008,
+        2011,
+        2014
+      ]
+    },
+    "Gradient Boosting": {
+      "RMSE_log_mean": 0.22716528584391601,
+      "RMSE_log_std": 0.021050419028000332,
+      "R2_within_crop_mean": 0.6452256850313344,
+      "origins": [
+        2008,
+        2011,
+        2014
+      ]
+    },
+    "HistGradientBoosting": {
+      "RMSE_log_mean": 0.2294033310913489,
+      "RMSE_log_std": 0.025542812495819685,
+      "R2_within_crop_mean": 0.6370357537572029,
+      "origins": [
+        2008,
+        2011,
+        2014
+      ]
+    }
+  },
+  "ablation_test": {
+    "All features": {
+      "n": 3202,
+      "MAE_log": 0.14167179353782314,
+      "RMSE_log": 0.25503143783442495,
+      "R2_log": 0.9470422882212721,
+      "R2_within_crop": 0.5916789130797705,
+      "MAE": 11.75493422855908,
+      "RMSE": 154.9514503392627,
+      "R2": 0.9668336848945037,
+      "MAE_excl_coconut": 1.2130402378895384,
+      "RMSE_excl_coconut": 8.610271109560667,
+      "R2_excl_coconut": 0.6469712256929514,
+      "median_APE_pct": 14.277630585208373,
+      "within_25pct_share": 0.6845721424109932
+    },
+    "No history features": {
+      "n": 3202,
+      "MAE_log": 0.16140815769273767,
+      "RMSE_log": 0.2709738578712807,
+      "R2_log": 0.9402144041813005,
+      "R2_within_crop": 0.539033718660959,
+      "MAE": 11.64730120303218,
+      "RMSE": 160.00514188930563,
+      "R2": 0.9646349879866633,
+      "MAE_excl_coconut": 1.450871959922721,
+      "RMSE_excl_coconut": 9.1391701193882,
+      "R2_excl_coconut": 0.6022685115815252,
+      "median_APE_pct": 17.766850203555205,
+      "within_25pct_share": 0.6499063085571518
+    },
+    "No fertilizer/pesticide": {
+      "n": 3202,
+      "MAE_log": 0.1409874642313611,
+      "RMSE_log": 0.25467157745856794,
+      "R2_log": 0.9471916340182629,
+      "R2_within_crop": 0.5928304174802823,
+      "MAE": 11.286655311440812,
+      "RMSE": 152.53709824770837,
+      "R2": 0.9678591844646415,
+      "MAE_excl_coconut": 1.1951762684421021,
+      "RMSE_excl_coconut": 8.534713388937815,
+      "R2_excl_coconut": 0.653139907899691,
+      "median_APE_pct": 14.030146731760068,
+      "within_25pct_share": 0.6861336664584634
+    },
+    "No rainfall": {
+      "n": 3202,
+      "MAE_log": 0.1406385138753274,
+      "RMSE_log": 0.2543262658641453,
+      "R2_log": 0.9473347436538365,
+      "R2_within_crop": 0.5939338390591888,
+      "MAE": 11.052075324742255,
+      "RMSE": 142.98966234698526,
+      "R2": 0.9717567147276297,
+      "MAE_excl_coconut": 1.21570550131943,
+      "RMSE_excl_coconut": 8.600771849087971,
+      "R2_excl_coconut": 0.6477497522600602,
+      "median_APE_pct": 14.34721119483539,
+      "within_25pct_share": 0.6926920674578388
+    }
+  },
+  "permutation_importance": [
+    {
+      "feature": "hist_recent",
+      "importance": 0.61974,
+      "std": 0.00495
+    },
+    {
+      "feature": "hist_mean",
+      "importance": 0.23693,
+      "std": 0.00387
+    },
+    {
+      "feature": "Crop",
+      "importance": 0.12526,
+      "std": 0.0052
+    },
+    {
+      "feature": "crop_group",
+      "importance": 0.02462,
+      "std": 0.002
+    },
+    {
+      "feature": "log_area",
+      "importance": 0.00478,
+      "std": 0.00085
+    },
+    {
+      "feature": "Season",
+      "importance": 0.00403,
+      "std": 0.00042
+    },
+    {
+      "feature": "hist_level",
+      "importance": 0.00039,
+      "std": 0.00019
+    },
+    {
+      "feature": "Annual_Rainfall",
+      "importance": 0.00037,
+      "std": 0.00022
+    },
+    {
+      "feature": "pest_ha",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "Crop_Year",
+      "importance": 0.0,
+      "std": 0.0
+    },
+    {
+      "feature": "fert_ha",
+      "importance": -0.0001,
+      "std": 0.00011
+    },
+    {
+      "feature": "State",
+      "importance": -0.00029,
+      "std": 0.00018
+    },
+    {
+      "feature": "rain_anom",
+      "importance": -0.00029,
+      "std": 0.00015
+    },
+    {
+      "feature": "hist_n",
+      "importance": -0.00079,
+      "std": 0.00031
+    }
+  ],
+  "error_by_crop_group_test": {
+    "cereal": {
+      "n": 831,
+      "median_APE_pct": 11.347942990877991,
+      "RMSE_log": 0.16971383058713518
+    },
+    "fibre": {
+      "n": 139,
+      "median_APE_pct": 15.544177513187499,
+      "RMSE_log": 0.295400414302369
+    },
+    "oilseed": {
+      "n": 645,
+      "median_APE_pct": 16.343270083142603,
+      "RMSE_log": 0.14735513739790637
+    },
+    "other": {
+      "n": 72,
+      "median_APE_pct": 14.897671122817274,
+      "RMSE_log": 0.29618207184253875
+    },
+    "plantation": {
+      "n": 136,
+      "median_APE_pct": 16.718763204256444,
+      "RMSE_log": 0.30110655157269783
+    },
+    "pulse": {
+      "n": 800,
+      "median_APE_pct": 14.301641467373441,
+      "RMSE_log": 0.16363518566859708
+    },
+    "sugar": {
+      "n": 79,
+      "median_APE_pct": 13.383912746196676,
+      "RMSE_log": 0.32172343660719693
+    },
+    "tuber": {
+      "n": 186,
+      "median_APE_pct": 13.016506708935005,
+      "RMSE_log": 0.3664563598003011
+    },
+    "vegetable_spice": {
+      "n": 314,
+      "median_APE_pct": 20.431763217836917,
+      "RMSE_log": 0.5201940957288507
+    }
+  },
+  "interval": {
+    "level": 0.8,
+    "empirical_test_coverage": 0.7713928794503435,
+    "global_log_halfwidth": 0.17324493169612976
+  },
+  "final_model_note": "Deployed model is refit on all rows 1997-2020 using the same hyperparameters; the metrics above come from the train-only fit.",
+  "missing_features": {
+    "soil_type": "not in dataset",
+    "soil_fertility": "not in dataset",
+    "temperature": "not in dataset",
+    "irrigation": "not in dataset",
+    "note": "These cannot be model inputs without inventing data. They drive rule-based, source-cited advisory modules instead (see knowledge/)."
+  },
+  "data_caveats": [
+    "Annual_Rainfall is one value per State-Year (identical for every crop and district in it).",
+    "Fertilizer and Pesticide are state-year per-hectare rates multiplied by crop area; the per-hectare rate is identical for all crops in a state-year, so the model cannot learn a per-crop fertilizer response.",
+    "Yield is district/state aggregate; it is not farm-level.",
+    "Rajasthan is not present in the dataset (30 states/UTs are), so yield estimates and crop ranking are unavailable for it.",
+    "Units are not stated in the CSV; t/ha assumed except nuts/ha (Coconut) and bales/ha (Cotton, Jute, Mesta, Sannhamp)."
+  ],
+  "trained_at": "2026-11-15 22:41:14",
+  "seconds": 113.4
+}
