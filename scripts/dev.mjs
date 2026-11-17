@@ -33,6 +33,7 @@ function parseEnvFile(filePath) {
 const centralEnv = parseEnvFile(centralEnvPath);
 const effectiveEnv = { ...centralEnv, ...process.env };
 const centralEnvNames = Object.keys(centralEnv);
+const backendCentralEnvNames = centralEnvNames.filter(name => !['GROQ_API_KEY', 'GROQ_MODEL'].includes(name));
 
 function childEnvironment(allowedCentralNames = [], extraEnv = {}) {
   const childEnv = { ...process.env };
@@ -247,8 +248,8 @@ async function ensureCropGptApi() {
     effectiveEnv.CROPGPT_PYTHON_BIN || 'python',
     ['-m', 'uvicorn', 'app.main:app', '--app-dir', 'backend', '--host', '127.0.0.1', '--port', String(cropGptApiPort)],
     paths.cropGptBackend,
-    {},
-    ['CROPGPT_API_URL', 'CROPGPT_PYTHON_BIN', 'CROPGPT_TIMEOUT_MS'],
+    { PYTHON_DOTENV_DISABLED: '1' },
+    ['CROPGPT_API_URL', 'CROPGPT_PYTHON_BIN', 'CROPGPT_TIMEOUT_MS', 'GROQ_API_KEY', 'GROQ_MODEL'],
   );
 
   for (let attempt = 0; attempt < 60; attempt += 1) {
@@ -283,6 +284,7 @@ async function ensureCropAdvisorApi() {
       HOST: '127.0.0.1',
       PORT: String(cropAdvisorApiPort),
       API_KEY: effectiveEnv.CROP_ADVISOR_API_KEY || effectiveEnv.API_KEY || '',
+      PYTHON_DOTENV_DISABLED: '1',
     },
     ['RATE_LIMIT_PER_MIN', 'SECRET_KEY'],
   );
@@ -378,7 +380,7 @@ async function main() {
       paths.backend,
       backendHealthCheck,
       {},
-      centralEnvNames,
+      backendCentralEnvNames,
     );
     const frontend = backendEntry
       ? null

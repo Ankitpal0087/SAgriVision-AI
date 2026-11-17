@@ -427,6 +427,7 @@ async function requestSeedAnalysis(payload) {
     try { body = await response.json(); } catch { body = null; }
     if (response.status === 401) throw new Error('unauthorized');
     if (response.status >= 500) throw new Error('server');
+    if (response.status === 422 && body?.error === 'No valid seed detected. Please upload a clear image of a supported seed.') throw new Error('no-valid-seed');
     if (!response.ok) throw new Error('invalid-response');
     if (!body || typeof body.seedType !== 'string' || body.confidence == null) throw new Error('invalid-response');
     return body;
@@ -459,7 +460,7 @@ async function startAnalysis() {
     const response = await requestSeedAnalysis({ image, mimeType: selectedFile.type, filename: selectedFile.name });
     showResult(response);
   } catch (error) {
-    const message = error.name === 'AbortError' ? dictionary.seedTimeout : error instanceof TypeError ? dictionary.seedNetwork : error.message === 'missing-token' ? dictionary.seedMissingToken : error.message === 'unauthorized' ? dictionary.seedUnauthorized : error.message === 'server' ? dictionary.seedServer : dictionary.seedInvalidResponse;
+    const message = error.name === 'AbortError' ? dictionary.seedTimeout : error instanceof TypeError ? dictionary.seedNetwork : error.message === 'missing-token' ? dictionary.seedMissingToken : error.message === 'unauthorized' ? dictionary.seedUnauthorized : error.message === 'no-valid-seed' ? dictionary.seedNoValidSeed : error.message === 'server' ? dictionary.seedServer : dictionary.seedInvalidResponse;
     setImageError(message);
     analysisProgress.hidden = true;
     analysisResult.hidden = true;
