@@ -6,15 +6,49 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const backendEntry = process.argv.includes('--backend-entry');
+const centralEnvPath = path.join(root, 'backend', '.env.development');
 const services = [];
 let shuttingDown = false;
+
+function parseEnvFile(filePath) {
+  const values = {};
+  const contents = readFileSync(filePath, 'utf8');
+  for (const rawLine of contents.split(/\r?\n/)) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith('#')) continue;
+    const match = line.match(/^(?:export\s+)?([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)$/);
+    if (!match) continue;
+    let value = match[2].trim();
+    if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+      value = value.slice(1, -1);
+    } else {
+      value = value.replace(/\s+#.*$/, '').trim();
+    }
+    values[match[1]] = value;
+  }
+  return values;
+}
+
+// Load the central development configuration once. Shell variables retain precedence.
+const centralEnv = parseEnvFile(centralEnvPath);
+const effectiveEnv = { ...centralEnv, ...process.env };
+const centralEnvNames = Object.keys(centralEnv);
+
+function childEnvironment(allowedCentralNames = [], extraEnv = {}) {
+  const childEnv = { ...process.env };
+  for (const name of centralEnvNames) delete childEnv[name];
+  for (const name of allowedCentralNames) {
+    if (effectiveEnv[name] !== undefined) childEnv[name] = effectiveEnv[name];
+  }
+  return { ...childEnv, ...extraEnv, PYTHONDONTWRITEBYTECODE: '1' };
+}
 
 const paths = {
   frontend: `${root}/frontend`,
   cropGptFrontend: `${root}/frontend/cropgpt-app`,
   cropGptBackend: 'D:/CropGpt',
   cropAdvisor: `${root}/crop-advisor-service`,
-  cropAdvisorPython: process.env.CROP_ADVISOR_PYTHON_BIN || 'D:/crop_advisor/.venv/Scripts/python.exe',
+  cropAdvisorPython: effectiveEnv.CROP_ADVISOR_PYTHON_BIN || 'D:/crop_advisor/.venv/Scripts/python.exe',
   backend: `${root}/backend`,
   diseaseDetection: `${root}/disease-detection-service`,
   mlWorkingDir: `${root}/crop-recommendation-module/ml-api/ml`,
@@ -22,13 +56,13 @@ const paths = {
 };
 // This orchestrator owns only the Crop Recommendation API on port 8001.
 // Keep the other project's ML API on port 8000 completely out of this flow.
-const mlApiUrl = 'http://127.0.0.1:8001';
+const mlApiUrl = effectiveEnv.ML_API_URL || 'http://127.0.0.1:8001';
 const mlApiPort = 8001;
-const cropGptApiUrl = 'http://127.0.0.1:8002';
+const cropGptApiUrl = effectiveEnv.CROPGPT_API_URL || 'http://127.0.0.1:8002';
 const cropGptApiPort = 8002;
-const cropAdvisorApiUrl = 'http://127.0.0.1:5000';
+const cropAdvisorApiUrl = effectiveEnv.CROP_ADVISOR_API_URL || 'http://127.0.0.1:5000';
 const cropAdvisorApiPort = 5000;
-const diseaseApiUrl = 'http://127.0.0.1:5055';
+const diseaseApiUrl = effectiveEnv.DISEASE_API_URL || 'http://127.0.0.1:5055';
 const diseaseApiPort = 5055;
 
 function log(name, message) {
@@ -40,10 +74,10 @@ function attachOutput(name, child) {
   child.stderr?.on('data', chunk => log(`${name}:err`, chunk.toString()));
 }
 
-function spawnService(name, command, args, cwd, extraEnv = {}) {
+function spawnService(name, command, args, cwd, extraEnv = {}, allowedCentralNames = []) {
   const child = spawn(command, args, {
     cwd,
-    env: { ...process.env, ...extraEnv, PYTHONDONTWRITEBYTECODE: '1' },
+    env: childEnvironment(allowedCentralNames, extraEnv),
     stdio: ['ignore', 'pipe', 'pipe'],
     windowsHide: true,
   });
@@ -55,7 +89,7 @@ function spawnService(name, command, args, cwd, extraEnv = {}) {
 
 function diseasePythonCandidates() {
   const candidates = [];
-  if (process.env.DISEASE_PYTHON_BIN) candidates.push(process.env.DISEASE_PYTHON_BIN);
+  if (effectiveEnv.DISEASE_PYTHON_BIN) candidates.push(effectiveEnv.DISEASE_PYTHON_BIN);
   if (process.env.LOCALAPPDATA) candidates.push(path.join(process.env.LOCALAPPDATA, 'Programs', 'Python', 'Python310', 'python.exe'));
   try {
     const config = readFileSync('D:/diseasedetection/.venv/pyvenv.cfg', 'utf8');
@@ -148,7 +182,7 @@ function ensureCropGptFrontend() {
   log('cropgpt-ui', 'building integrated React frontend\n');
   const result = spawnSync(npmCommand, npmArgs, {
     cwd: paths.cropGptFrontend,
-    env: { ...process.env, CI: '1' },
+    env: childEnvironment([], { CI: '1' }),
     encoding: 'utf8',
     windowsHide: true,
   });
@@ -210,9 +244,11 @@ async function ensureCropGptApi() {
   log('cropgpt-api', 'starting CropGPT FastAPI service on port 8002\n');
   const child = spawnService(
     'cropgpt-api',
-    process.env.CROPGPT_PYTHON_BIN || 'python',
+    effectiveEnv.CROPGPT_PYTHON_BIN || 'python',
     ['-m', 'uvicorn', 'app.main:app', '--app-dir', 'backend', '--host', '127.0.0.1', '--port', String(cropGptApiPort)],
     paths.cropGptBackend,
+    {},
+    ['CROPGPT_API_URL', 'CROPGPT_PYTHON_BIN', 'CROPGPT_TIMEOUT_MS'],
   );
 
   for (let attempt = 0; attempt < 60; attempt += 1) {
@@ -243,7 +279,12 @@ async function ensureCropAdvisorApi() {
     paths.cropAdvisorPython,
     ['run.py'],
     paths.cropAdvisor,
-    { HOST: '127.0.0.1', PORT: String(cropAdvisorApiPort), API_KEY: process.env.CROP_ADVISOR_API_KEY || '' },
+    {
+      HOST: '127.0.0.1',
+      PORT: String(cropAdvisorApiPort),
+      API_KEY: effectiveEnv.CROP_ADVISOR_API_KEY || effectiveEnv.API_KEY || '',
+    },
+    ['RATE_LIMIT_PER_MIN', 'SECRET_KEY'],
   );
 
   for (let attempt = 0; attempt < 60; attempt += 1) {
@@ -275,6 +316,7 @@ async function ensureDiseaseDetectionApi() {
     ['app.py'],
     paths.diseaseDetection,
     { HOST: '127.0.0.1', PORT: String(diseaseApiPort) },
+    ['LEAF_THRESHOLD', 'UNCERTAIN_LEAF_FLOOR', 'CROP_THRESHOLD', 'CROP_MARGIN', 'DISEASE_THRESHOLD', 'DISEASE_MARGIN'],
   );
   for (let attempt = 0; attempt < 60; attempt += 1) {
     if (await diseaseHealthCheck()) {
@@ -287,7 +329,7 @@ async function ensureDiseaseDetectionApi() {
   throw new Error('Disease Detection service did not become healthy within 30 seconds. Check Python dependencies and disease-detection-service logs.');
 }
 
-async function startOrReuse(name, port, command, args, cwd, isHealthy) {
+async function startOrReuse(name, port, command, args, cwd, isHealthy, extraEnv = {}, allowedCentralNames = []) {
   if (await isHealthy()) {
     log(name, `reusing healthy service on port ${port}\n`);
     return null;
@@ -295,7 +337,7 @@ async function startOrReuse(name, port, command, args, cwd, isHealthy) {
   if (await portIsOpen(port)) {
     throw new Error(`Port ${port} is occupied, but the ${name} health check failed. Refusing to start a duplicate.`);
   }
-  const child = spawnService(name, command, args, cwd);
+  const child = spawnService(name, command, args, cwd, extraEnv, allowedCentralNames);
   for (let attempt = 0; attempt < 60; attempt += 1) {
     if (await isHealthy()) return child;
     if (child.exitCode !== null) break;
@@ -332,13 +374,15 @@ async function main() {
       'backend',
       3000,
       process.execPath,
-      ['--env-file=.env.development', '--watch', 'src/index.js'],
+      ['--watch', 'src/index.js'],
       paths.backend,
       backendHealthCheck,
+      {},
+      centralEnvNames,
     );
     const frontend = backendEntry
       ? null
-      : await startOrReuse('frontend', 4173, process.execPath, ['server.mjs'], paths.frontend, frontendHealthCheck);
+      : await startOrReuse('frontend', 4173, process.execPath, ['server.mjs'], paths.frontend, frontendHealthCheck, { PORT: '4173' });
     backend?.once('exit', (code, signal) => {
       if (!shuttingDown) log('dev', `backend exited (code=${code}, signal=${signal ?? 'none'})\n`), shutdown(code || 1);
     });
